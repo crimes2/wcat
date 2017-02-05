@@ -1439,6 +1439,30 @@
   </entry>
   
   <entry>
+    <title>使用jekyll在Github上搭建博客</title>
+    <link href="http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html"/>
+    <id>http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html</id>
+    <published>2014-07-14T16:00:00.000Z</published>
+    <updated>2016-02-29T12:33:07.000Z</updated>
+    
+    <summary type="html">
+    
+      使用jekyll在Github上搭建博客
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
+    
+      <category term="reprints" scheme="http://www.ezlippi.com/categories/jekyll/reprints/"/>
+    
+    
+      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+    
+      <category term="github" scheme="http://www.ezlippi.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一个合格的程序员应该读过哪些书</title>
     <link href="http://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html"/>
     <id>http://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html</id>
@@ -1461,30 +1485,6 @@
       <category term="书籍" scheme="http://www.ezlippi.com/tags/%E4%B9%A6%E7%B1%8D/"/>
     
       <category term="程序" scheme="http://www.ezlippi.com/tags/%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用jekyll在Github上搭建博客</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html</id>
-    <published>2014-07-14T16:00:00.000Z</published>
-    <updated>2016-02-29T12:33:07.000Z</updated>
-    
-    <summary type="html">
-    
-      使用jekyll在Github上搭建博客
-    
-    </summary>
-    
-      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
-    
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/jekyll/reprints/"/>
-    
-    
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
-    
-      <category term="github" scheme="http://www.ezlippi.com/tags/github/"/>
     
   </entry>
   
