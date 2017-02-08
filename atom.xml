@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ezlippi.com/"/>
-  <updated>2017-02-08T13:10:19.955Z</updated>
+  <updated>2017-02-08T15:08:04.815Z</updated>
   <id>http://www.ezlippi.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.ezlippi.com//blog/2017/02/sed-introduction.html"/>
     <id>http://www.ezlippi.com//blog/2017/02/sed-introduction.html</id>
     <published>2017-02-08T05:38:32.000Z</published>
-    <updated>2017-02-08T13:10:19.955Z</updated>
+    <updated>2017-02-08T15:08:04.815Z</updated>
     
     <summary type="html">
     
@@ -998,22 +998,23 @@
   </entry>
   
   <entry>
-    <title>Android消息推送方式</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/android-push.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/android-push.html</id>
+    <title>如何评价『黑客与画家』</title>
+    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
+    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
     <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-03-01T05:16:43.000Z</updated>
+    <updated>2016-02-29T12:35:55.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;当我们开发需要和服务器交互的应用程序时，基本上都需要获取服务器端的数据，比如《地震及时通》就需要及时获取服务器上最新的地震信息。要获取服务器上不定时更新的信息一般来说有两种方法，第一种是客户端使用&lt;strong&gt;Pull（拉）&lt;/strong&gt;的方式，隔一段时间就去服务器上获取信息，看是否有更新的信息出现。第二种就是服务器使用&lt;strong&gt;Push（推送）&lt;/strong&gt;的方式，当服务器端有新信息了，则把最新的信息Push到客户端上。&lt;br&gt;虽然Pull和Push两种方式都能实现获取服务器端更新信息的功能，但是明显来说&lt;strong&gt;Push is better than pull&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;因为Pull方式更费客户端的网络流量，更主要的是费电量。&lt;/strong&gt;&lt;br&gt;
+      &lt;p&gt;传送门：&lt;a href=&quot;http://t.cn/zlg4njc&quot;&gt;黑客与画家:硅谷创业之父Paul Graham文集&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，&lt;br&gt;&lt;strong&gt;他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。&lt;/strong&gt;&lt;br&gt;他没有送给我们一条大鱼，却把捕捉大鱼的方法交给了我们， &lt;strong&gt;授人以鱼，不如授人以渔&lt;/strong&gt;。&lt;br&gt;
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
     
     
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
+      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
     
   </entry>
   
@@ -1045,23 +1046,22 @@
   </entry>
   
   <entry>
-    <title>如何评价『黑客与画家』</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
+    <title>Android消息推送方式</title>
+    <link href="http://www.ezlippi.com//blog/2014/11/android-push.html"/>
+    <id>http://www.ezlippi.com//blog/2014/11/android-push.html</id>
     <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:55.000Z</updated>
+    <updated>2016-03-01T05:16:43.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;传送门：&lt;a href=&quot;http://t.cn/zlg4njc&quot;&gt;黑客与画家:硅谷创业之父Paul Graham文集&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，&lt;br&gt;&lt;strong&gt;他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。&lt;/strong&gt;&lt;br&gt;他没有送给我们一条大鱼，却把捕捉大鱼的方法交给了我们， &lt;strong&gt;授人以鱼，不如授人以渔&lt;/strong&gt;。&lt;br&gt;
+      &lt;p&gt;当我们开发需要和服务器交互的应用程序时，基本上都需要获取服务器端的数据，比如《地震及时通》就需要及时获取服务器上最新的地震信息。要获取服务器上不定时更新的信息一般来说有两种方法，第一种是客户端使用&lt;strong&gt;Pull（拉）&lt;/strong&gt;的方式，隔一段时间就去服务器上获取信息，看是否有更新的信息出现。第二种就是服务器使用&lt;strong&gt;Push（推送）&lt;/strong&gt;的方式，当服务器端有新信息了，则把最新的信息Push到客户端上。&lt;br&gt;虽然Pull和Push两种方式都能实现获取服务器端更新信息的功能，但是明显来说&lt;strong&gt;Push is better than pull&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;因为Pull方式更费客户端的网络流量，更主要的是费电量。&lt;/strong&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
+      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
+      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
