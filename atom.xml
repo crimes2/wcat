@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ezlippi.com/"/>
-  <updated>2017-02-09T13:13:05.328Z</updated>
+  <updated>2017-02-12T14:28:08.127Z</updated>
   <id>http://www.ezlippi.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MyBatis简明教程</title>
+    <link href="http://www.ezlippi.com//blog/2017/02/mybatis-intorduction.html"/>
+    <id>http://www.ezlippi.com//blog/2017/02/mybatis-intorduction.html</id>
+    <published>2017-02-12T05:38:32.000Z</published>
+    <updated>2017-02-12T14:28:08.127Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MyBatis是一个优秀的ORM(对象关系映射)框架，和Hibernate不太一样，Hibernate不用你编写一行SQL语句，而MyBatis需要手写SQL语句，优点就是能够灵活调试SQL语句。这篇文章主要对MyBatis的几个核心概念进行介绍，以及如何在项目中使用MyBatis。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://www.ezlippi.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://www.ezlippi.com/tags/Java/"/>
+    
+      <category term="MyBatis" scheme="http://www.ezlippi.com/tags/MyBatis/"/>
+    
+      <category term="ORM" scheme="http://www.ezlippi.com/tags/ORM/"/>
+    
+      <category term="DataBase" scheme="http://www.ezlippi.com/tags/DataBase/"/>
+    
+  </entry>
   
   <entry>
     <title>SED常用命令介绍</title>
@@ -998,27 +1024,6 @@
   </entry>
   
   <entry>
-    <title>如何评价『黑客与画家』</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
-    <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:55.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;传送门：&lt;a href=&quot;http://t.cn/zlg4njc&quot;&gt;黑客与画家:硅谷创业之父Paul Graham文集&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，&lt;br&gt;&lt;strong&gt;他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。&lt;/strong&gt;&lt;br&gt;他没有送给我们一条大鱼，却把捕捉大鱼的方法交给了我们， &lt;strong&gt;授人以鱼，不如授人以渔&lt;/strong&gt;。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
-    
-    
-      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
-    
-  </entry>
-  
-  <entry>
     <title>java中NIO与传统IO</title>
     <link href="http://www.ezlippi.com//blog/2014/11/java-nio.html"/>
     <id>http://www.ezlippi.com//blog/2014/11/java-nio.html</id>
@@ -1042,6 +1047,27 @@
       <category term="IO" scheme="http://www.ezlippi.com/tags/IO/"/>
     
       <category term="阻塞" scheme="http://www.ezlippi.com/tags/%E9%98%BB%E5%A1%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何评价『黑客与画家』</title>
+    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
+    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
+    <published>2014-10-31T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:55.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;传送门：&lt;a href=&quot;http://t.cn/zlg4njc&quot;&gt;黑客与画家:硅谷创业之父Paul Graham文集&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，&lt;br&gt;&lt;strong&gt;他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。&lt;/strong&gt;&lt;br&gt;他没有送给我们一条大鱼，却把捕捉大鱼的方法交给了我们， &lt;strong&gt;授人以鱼，不如授人以渔&lt;/strong&gt;。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
+    
+    
+      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
     
   </entry>
   
