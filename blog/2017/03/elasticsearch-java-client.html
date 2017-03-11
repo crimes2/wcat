@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Java,ElasticSearch,DataBase," />
+  <meta name="keywords" content="Java,DataBase,ElasticSearch," />
 
 
 
@@ -104,7 +104,7 @@ ElasticSearch是一个分布式的、基于Json的检索引擎，具有水平扩
 为了更好的理解ealsticsearch的作用，我们可以看下Github的搜索页">
 <meta property="og:image" content="http://www.ezlippi.com/images/elasticsearch_github.png">
 <meta property="og:image" content="http://www.ezlippi.com/images/indexing source.png">
-<meta property="og:updated_time" content="2017-03-11T14:03:00.738Z">
+<meta property="og:updated_time" content="2017-03-11T14:17:23.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ElasticSearch Java客户端介绍">
 <meta name="twitter:description" content="这篇文章主要介绍ElasticSearch客户端，包括Transport客户端、Jest客户端和Spring Data ElasticSearch,首先来看几个基本概念。
@@ -429,7 +429,8 @@ ElasticSearch是一个分布式的、基于Json的检索引擎，具有水平扩
 <p>我们在输入框输入一个单词，会列出许多查询结果，搜索引擎和数据库的区别就是相关性，<br>我们可以看到elasticsearch的项目排在第一位，很有可能别人在搜索这个关键词时想要访问这个项目。对于不同的应用影响排名的因素可能各不一样。</p>
 <p>如果你想建立一个像这样的搜索引擎，首先你的安装elasticsearch,elasticsearch很容易安装，你只需要先安装好Java虚拟机就可以了。</p>
 <a id="more"></a>
-<h2 id="安装和使用ElasticSearch"><a href="#安装和使用ElasticSearch" class="headerlink" title="安装和使用ElasticSearch"></a>安装和使用ElasticSearch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># download archive</span></span><br><span class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.0.zip</span><br><span class="line">unzip elasticsearch-5.0.0.zip</span><br><span class="line"></span><br><span class="line"><span class="comment"># on windows: elasticsearch.bat</span></span><br><span class="line">elasticsearch-5.0.0/bin/elasticsearch</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">ElasticSearch默认绑定9200端口，你可以通过http://localhost:9200来访问，你也可以用命令行客户端来执行HTTP请求，这里我用curl来执行</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">curl -XGET <span class="string">"http://localhost:9200"</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装和使用ElasticSearch"><a href="#安装和使用ElasticSearch" class="headerlink" title="安装和使用ElasticSearch"></a>安装和使用ElasticSearch</h2><p>ElasticSearch默认绑定9200端口，你可以通过<a href="http://localhost:9200来访问，你也可以用命令行客户端来执行HTTP请求，这里我用curl来执行" target="_blank" rel="external">http://localhost:9200来访问，你也可以用命令行客户端来执行HTTP请求，这里我用curl来执行</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.0.zip</span><br><span class="line">unzip elasticsearch-5.0.0.zip</span><br><span class="line"></span><br><span class="line">elasticsearch-5.0.0/bin/elasticsearch</span><br><span class="line"></span><br><span class="line">curl -XGET <span class="string">"http://localhost:9200"</span></span><br></pre></td></tr></table></figure>
 <p>你会收到一个Json Document响应，这个响应包含ElasticSearch的安装信息,如下所示:</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "name" : "LI8ZN-t",</span><br><span class="line">  "cluster_name" : "elasticsearch",</span><br><span class="line">  "cluster_uuid" : "UvbMAoJ8TieUqugCGw7Xrw",</span><br><span class="line">  "version" : &#123;</span><br><span class="line">    "number" : "5.0.0",</span><br><span class="line">    "build_hash" : "253032b",</span><br><span class="line">    "build_date" : "2016-10-26T04:37:51.531Z",</span><br><span class="line">    "build_snapshot" : false,</span><br><span class="line">    "lucene_version" : "6.2.0"</span><br><span class="line">  &#125;,</span><br><span class="line">  "tagline" : "You Know, for Search"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>最重要的信息就是服务器已经启动成功，还包括ElasticSearch和Lucene的版本信息,Lucene是整个搜索功能的核心库。</p>
@@ -514,9 +515,9 @@ ElasticSearch是一个分布式的、基于Json的检索引擎，具有水平扩
           
             <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/ElasticSearch/" rel="tag"># ElasticSearch</a>
-          
             <a href="/tags/DataBase/" rel="tag"># DataBase</a>
+          
+            <a href="/tags/ElasticSearch/" rel="tag"># ElasticSearch</a>
           
         </div>
       
