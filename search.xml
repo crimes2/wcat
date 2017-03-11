@@ -4,6 +4,90 @@
   
     
     <entry>
+      <title><![CDATA[ElasticSearch Java客户端介绍]]></title>
+      <url>http://www.ezlippi.com/blog/2017/03/elasticsearch-java-client.html</url>
+      <content type="html"><![CDATA[<p>这篇文章主要介绍ElasticSearch客户端，包括Transport客户端、Jest客户端和Spring Data ElasticSearch,首先来看几个基本概念。</p>
+<h2 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h2><p>官方的介绍:</p>
+<pre><code>ElasticSearch是一个分布式的、基于Json的检索引擎，具有水平扩展、高可靠性和易于管理等优点。
+</code></pre><p>为了更好的理解ealsticsearch的作用，我们可以看下Github的搜索页面:</p>
+<p><img src="/images/elasticsearch_github.png" alt=""></p>
+<p>我们在输入框输入一个单词，会列出许多查询结果，搜索引擎和数据库的区别就是相关性，<br>我们可以看到elasticsearch的项目排在第一位，很有可能别人在搜索这个关键词时想要访问这个项目。对于不同的应用影响排名的因素可能各不一样。</p>
+<p>如果你想建立一个像这样的搜索引擎，首先你的安装elasticsearch,elasticsearch很容易安装，你只需要先安装好Java虚拟机就可以了。</p>
+<a id="more"></a>
+<h2 id="安装和使用ElasticSearch"><a href="#安装和使用ElasticSearch" class="headerlink" title="安装和使用ElasticSearch"></a>安装和使用ElasticSearch</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># download archive</span></span><br><span class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.0.0.zip</span><br><span class="line">unzip elasticsearch-5.0.0.zip</span><br><span class="line"></span><br><span class="line"><span class="comment"># on windows: elasticsearch.bat</span></span><br><span class="line">elasticsearch-5.0.0/bin/elasticsearch</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">ElasticSearch默认绑定9200端口，你可以通过http://localhost:9200来访问，你也可以用命令行客户端来执行HTTP请求，这里我用curl来执行</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">curl -XGET <span class="string">"http://localhost:9200"</span></span><br></pre></td></tr></table></figure>
+<p>你会收到一个Json Document响应，这个响应包含ElasticSearch的安装信息,如下所示:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "name" : "LI8ZN-t",</span><br><span class="line">  "cluster_name" : "elasticsearch",</span><br><span class="line">  "cluster_uuid" : "UvbMAoJ8TieUqugCGw7Xrw",</span><br><span class="line">  "version" : &#123;</span><br><span class="line">    "number" : "5.0.0",</span><br><span class="line">    "build_hash" : "253032b",</span><br><span class="line">    "build_date" : "2016-10-26T04:37:51.531Z",</span><br><span class="line">    "build_snapshot" : false,</span><br><span class="line">    "lucene_version" : "6.2.0"</span><br><span class="line">  &#125;,</span><br><span class="line">  "tagline" : "You Know, for Search"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最重要的信息就是服务器已经启动成功，还包括ElasticSearch和Lucene的版本信息,Lucene是整个搜索功能的核心库。</p>
+<p>现在我们开始给ElasticSearch发送一个Json文档来存储数据，这时候我们要用POST请求，这里我就以一个食物搜索系统为例来讲解怎么添加数据到索引。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST "http://localhost:9200/food/dish" -d'</span><br><span class="line">&#123;</span><br><span class="line">  "food": "Hainanese Chicken Rice",</span><br><span class="line">  "tags": ["chicken", "rice"],</span><br><span class="line">  "favorite": &#123;</span><br><span class="line">    "location": "Tian Tian",</span><br><span class="line">    "price": 5.00</span><br><span class="line">  &#125;</span><br><span class="line">&#125;'</span><br></pre></td></tr></table></figure>
+<p>我们还是用之前的端口，这时候我们加了两个字段在URL后面，food和dish，第一个是索引(index)的名称,这是所有文档的集合，第二个是类型(type)，相当于关系型数据库里的表。</p>
+<p>Dish用文档来建模，Elasticsearch支持多种数据类型,比如string,boolean,数值类型numerics以及嵌套的数据类型，比如上面的favorite。</p>
+<p>接下来我们再通过一个POST请求添加一个文档:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST "http://localhost:9200/food/dish" -d'</span><br><span class="line">&#123;</span><br><span class="line">  "food": "Ayam Penyet",</span><br><span class="line">  "tags": ["chicken", "indonesian"],</span><br><span class="line">  "spicy": true</span><br><span class="line">&#125;'</span><br></pre></td></tr></table></figure>
+<p>这一次文档的结构有啥不同，它没有包含faorite元素，但添加了另一个spicy属性。同个类型的文档可能差异很大。</p>
+<p>建立索引之后，我们就可以来搜索关键字了。我们可以在链接的后面加一个_search，然后添加一个查询参数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -XGET <span class="string">"http://localhost:9200/food/dish/_search?q=chicken"</span></span><br></pre></td></tr></table></figure>
+<p>这个请求在dish类型里搜索包含chicken字段的文档，结果如下:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;"took":57,"timed_out":false,"_shards":&#123;"total":5,"successful":5,"failed":0&#125;,"hits":&#123;"total":2,"max_score":0.3666863,"hits":[&#123;"_index":"food","_type":"dish","_id":"AVq9cnkMZAUVR2HS07Sa","_score":0.3666863,"_source":</span><br><span class="line">&#123;</span><br><span class="line">  "food": "Hainanese Chicken Rice",</span><br><span class="line">  "tags": ["chicken", "rice"],</span><br><span class="line">  "favorite": &#123;</span><br><span class="line">    "location": "Tian Tian",</span><br><span class="line">    "price": 5.00</span><br><span class="line">  &#125;</span><br><span class="line">&#125;&#125;,&#123;"_index":"food","_type":"dish","_id":"AVq9cqoiZAUVR2HS07Sb","_score":0.2876821,"_source":</span><br><span class="line">&#123;</span><br><span class="line">  "food": "Ayam Penyet",</span><br><span class="line">  "tags": ["chicken", "indonesian"],</span><br><span class="line">  "spicy": true</span><br><span class="line">&#125;&#125;]&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>搜索结果包含了找到文档的数量，最重要的属性是hits数组，这里面包含索引到的source原始数据。Elasticsearch提供基于JSON结构的查询DSL，如下所示:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST "http://localhost:9200/food/dish/_search" -d'</span><br><span class="line">&#123;</span><br><span class="line">  "query": &#123;</span><br><span class="line">    "bool": &#123;</span><br><span class="line">      "must": &#123;</span><br><span class="line">      "match": &#123;</span><br><span class="line">        "_all": "rice"</span><br><span class="line">      &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      "filter": &#123;</span><br><span class="line">    "term": &#123;</span><br><span class="line">      "tags.keyword": "chicken"</span><br><span class="line">    &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;'</span><br></pre></td></tr></table></figure>
+<p>上面这个JSON是在搜索包含rice字段以及tags字段里有chicken的文档，elasticsearch 5.0提供了.keyword字段来精确查询。</p>
+<p>到目前为止我们只访问了单个ElasticSearch实例,ElasticSearch具有水平伸缩的特性，我们可以添加更多的node，我们仍然可以连接第一个node,它可以将请求转发到集群中的其他节点。</p>
+<h2 id="ElasticSearch客户端介绍"><a href="#ElasticSearch客户端介绍" class="headerlink" title="ElasticSearch客户端介绍"></a>ElasticSearch客户端介绍</h2><h3 id="Transport客户端"><a href="#Transport客户端" class="headerlink" title="Transport客户端"></a>Transport客户端</h3><p>Transport客户端从ElasticSearch第一个版本就有了，也是使用最广泛的客户端，使用它需要在你的构建工具中添加依赖，我这里用的Gradle：</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">group</span>: <span class="string">'org.elasticsearch.client'</span>,</span><br><span class="line">        name: <span class="string">'transport'</span>,</span><br><span class="line">        version: <span class="string">'5.0.0'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过客户端你可以使用ElasticSearch的所有功能，你可以通过Settings对象来初始化一个TransportClient实例，你可以绑定多个节点的地址:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">TransportAddress address =</span><br><span class="line">    <span class="keyword">new</span> InetSocketTransportAddress(</span><br><span class="line">        InetAddress.getByName(<span class="string">"localhost"</span>), <span class="number">9300</span>);</span><br><span class="line"></span><br><span class="line">Client client = <span class="keyword">new</span> PreBuiltTransportClient(Settings.EMPTY)</span><br><span class="line">    addTransportAddress(address);</span><br></pre></td></tr></table></figure>
+<h3 id="查询接口"><a href="#查询接口" class="headerlink" title="查询接口"></a>查询接口</h3><p>对于之前的那条查询:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">curl -XPOST "http://localhost:9200/food/dish/_search" -d'</span><br><span class="line">&#123;</span><br><span class="line">  "query": &#123;</span><br><span class="line">    "bool": &#123;</span><br><span class="line">      "must": &#123;</span><br><span class="line">      "match": &#123;</span><br><span class="line">        "_all": "rice"</span><br><span class="line">      &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      "filter": &#123;</span><br><span class="line">    "term": &#123;</span><br><span class="line">      "tags.keyword": "chicken"</span><br><span class="line">    &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;'</span><br></pre></td></tr></table></figure>
+<p>我们将它转换成Java代码:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SearchResponse searchResponse = client</span><br><span class="line">   .prepareSearch(<span class="string">"food"</span>)</span><br><span class="line">   .setQuery(</span><br><span class="line">    boolQuery().</span><br><span class="line">      must(matchQuery(<span class="string">"_all"</span>, <span class="string">"rice"</span>)).</span><br><span class="line">      filter(termQuery(<span class="string">"tags.keyword"</span>, <span class="string">"chicken"</span>)))</span><br><span class="line">   .execute().actionGet();</span><br><span class="line"></span><br><span class="line">assertEquals(<span class="number">1</span>, searchResponse.getHits().getTotalHits());</span><br><span class="line"></span><br><span class="line">SearchHit hit = searchResponse.getHits().getAt(<span class="number">0</span>);</span><br><span class="line">String food = hit.getSource().get(<span class="string">"food"</span>).toString();</span><br></pre></td></tr></table></figure>
+<p>我这里调用prepareSearch来请求SearchSourceBuilder，然后我们可以通过静态帮助方法来设置一个查询，上面这个例子用的是bool查询，这个查询的must节点有个match查询，filter节点有个term查询。</p>
+<p>调用execute方法会返回一个future对象，actionGet是个阻塞调用，SearchResponse的结果和我们用HTTP访问的结果是等价的。</p>
+<h3 id="添加索引接口"><a href="#添加索引接口" class="headerlink" title="添加索引接口"></a>添加索引接口</h3><p>我们可以用不同的方法来添加索引，其中之一就是使用jsonBuilder来创建一个Json表达式:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">XContentBuilder builder = jsonBuilder()</span><br><span class="line">    .startObject()</span><br><span class="line">        .field(<span class="string">"food"</span>, <span class="string">"Roti Prata"</span>)</span><br><span class="line">        .array(<span class="string">"tags"</span>, <span class="keyword">new</span> String [] &#123;<span class="string">"curry"</span>&#125;)</span><br><span class="line">        .startObject(<span class="string">"favorite"</span>)</span><br><span class="line">        .field(<span class="string">"location"</span>, <span class="string">"Tiong Bahru"</span>)</span><br><span class="line">        .field(<span class="string">"price"</span>, <span class="number">2.00</span>)</span><br><span class="line">        .endObject()</span><br><span class="line">    .endObject();</span><br></pre></td></tr></table></figure>
+<p>上面的表达式使用不同的method来创建JSON文档，这个文档可以作为IndexRequest的source：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IndexResponse resp = client.prepareIndex(<span class="string">"food"</span>,<span class="string">"dish"</span>)</span><br><span class="line">        .setSource(builder)</span><br><span class="line">        .execute()</span><br><span class="line">        .actionGet();</span><br></pre></td></tr></table></figure>
+<p>除了使用jsonBuilder我们还可以用其他的选项，如下所示:</p>
+<p><img src="/images/indexing source.png" alt=""></p>
+<p>对于比较简单的数据结构你可以使用Map来构造数据，可以结合序列化插件入jackson来完成对象的序列化。</p>
+<p>从前面的例子我们可以看到Transport客户端接收一个或多个节点的地址，你可能注意到这里用的是9300而不是9200端口，因为Transport客户端不使用HTTP来通信，它内部通过传输层协议来通信。</p>
+<p>前面只连接了一个节点，一旦这个节点挂了我们就不能访问数据了，如果你需要高可用性你可以启用sniffing选项来允许你的客户端连接集群中的其他节点,只需要把client.transport.sniff选项为true即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">TransportAddress address =</span><br><span class="line">    <span class="keyword">new</span> InetSocketTransportAddress(</span><br><span class="line">        InetAddress.getByName(<span class="string">"localhost"</span>), <span class="number">9300</span>);</span><br><span class="line"></span><br><span class="line">Settings settings = Settings.builder()</span><br><span class="line">            .put(<span class="string">"client.transport.sniff"</span>, <span class="keyword">true</span>)</span><br><span class="line">            .build();</span><br><span class="line"></span><br><span class="line">Client client = <span class="keyword">new</span> PreBuiltTransportClient(settings)</span><br><span class="line">    addTransportAddress(address);</span><br></pre></td></tr></table></figure>
+<p>更多关于sniffing特性可以参考elasticsearch的官方文档:<a href="https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/transport-client.html" target="_blank" rel="external">https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/transport-client.html</a></p>
+<h2 id="Jest客户端"><a href="#Jest客户端" class="headerlink" title="Jest客户端"></a>Jest客户端</h2><p>jest客户端能够发送请求给ElasticSearch，首先添加依赖:</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">group</span>: <span class="string">'io.searchbox'</span>,</span><br><span class="line">        name: <span class="string">'jest'</span>,</span><br><span class="line">        version: <span class="string">'2.0.0'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以用过工厂方法来创建一个JestClient:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">JestClientFactory factory = <span class="keyword">new</span> JestClientFactory();</span><br><span class="line">factory.setHttpClientConfig(<span class="keyword">new</span> HttpClientConfig</span><br><span class="line">            .Builder(<span class="string">"http://localhost:9200"</span>)</span><br><span class="line">            .multiThreaded(<span class="keyword">true</span>)</span><br><span class="line">            .build());</span><br><span class="line"></span><br><span class="line">JestClient client = factory.getObject();</span><br></pre></td></tr></table></figure>
+<p>和普通的Rest客户端一样，Jest不支持生成查询，你可以使用string模板或者复用ElasticSearch builders，builder可以用来创建搜索请求:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">String query = jsonStringThatMagicallyAppears;</span><br><span class="line"></span><br><span class="line">Search search = <span class="keyword">new</span> Search.Builder(query)</span><br><span class="line">    .addIndex(<span class="string">"library"</span>)</span><br><span class="line">    .build();</span><br><span class="line"></span><br><span class="line">SearchResult result = client.execute(search);</span><br><span class="line">assertEquals(Integer.valueOf(<span class="number">1</span>), result.getTotal());</span><br></pre></td></tr></table></figure>
+<p>获取查询结果:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">JsonObject jsonObject = result.getJsonObject();</span><br><span class="line">JsonObject hitsObj = jsonObject.getAsJsonObject(<span class="string">"hits"</span>);</span><br><span class="line">JsonArray hits = hitsObj.getAsJsonArray(<span class="string">"hits"</span>);</span><br><span class="line">JsonObject hit = hits.get(<span class="number">0</span>).getAsJsonObject();</span><br><span class="line"></span><br><span class="line"><span class="comment">// ... more boring code</span></span><br></pre></td></tr></table></figure>
+<p>上面这个不是正常使用Jest的方法，Jest支持搜索和索引Java Bean，比如说我用下面这个Java Bean来表示Dish类:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dish</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String food;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; tags;</span><br><span class="line">    <span class="keyword">private</span> Favorite favorite;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@JestId</span></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// ... getters and setters</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以自动将查询结果转换成Dish对象:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dish dish = result.getFirstHit(Dish.class).source;</span><br><span class="line"></span><br><span class="line">assertEquals(<span class="string">"Roti Prata"</span>, dish.getFood());</span><br></pre></td></tr></table></figure>
+<p>当通过HTTP来访问ElasticSearch时Jest是个不错的选择。</p>
+<h2 id="Spring-Data-ElasticSearch"><a href="#Spring-Data-ElasticSearch" class="headerlink" title="Spring Data ElasticSearch"></a>Spring Data ElasticSearch</h2><p>Spring Data项目提供了通用的编程模型来访问不同的数据源，吸引人的特性是Spring Data允许你使用接口来定义查询，比如比较流行的用来访问关系型数据库的Spring Data JPA以及Spring Data MongoDB。</p>
+<p>首先添加依赖:</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="keyword">compile</span> <span class="keyword">group</span>: <span class="string">'org.springframework.data'</span>,</span><br><span class="line">    name: <span class="string">'spring-data-elasticsearch'</span>,</span><br><span class="line">    version: <span class="string">'2.0.4.RELEASE'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用自定义注解来表示要索引的文档:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Document</span>(indexName = <span class="string">"spring_dish"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dish</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line">    <span class="keyword">private</span> String food;</span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; tags;</span><br><span class="line">    <span class="keyword">private</span> Favorite favorite;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// more code</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以定义一个接口来访问文档，这里使用ElasticsearchCrudRepository，它提供通用的索引和查询操作:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DishRepository</span> </span><br><span class="line">  <span class="keyword">extends</span> <span class="title">ElasticsearchCrudRepository</span>&lt;<span class="title">Dish</span>, <span class="title">String</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Spring Data ElasticSearch支持XML配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">elasticsearch:transport-client</span> <span class="attr">id</span>=<span class="string">"client"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"elasticsearchTemplate"</span> </span><br><span class="line">  <span class="attr">class</span>=<span class="string">"o.s.d.elasticsearch.core.ElasticsearchTemplate"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">name</span>=<span class="string">"client"</span> <span class="attr">ref</span>=<span class="string">"client"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">elasticsearch:repositories</span> </span><br><span class="line">  <span class="attr">base-package</span>=<span class="string">"ezlippi.elasticsearch.springdata"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>transport-client用于实例化transport客户端，elasticsearchTemplate提供访问ElasticSearch的通用操作，最后repositories元素告诉Spring Data扫描继承自Spring Data接口的接口，Spring会自动为这些接口创建实例。</p>
+<p>接下来就可以在Java代码中使用repository来执行索引操作:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Dish mie = <span class="keyword">new</span> Dish();</span><br><span class="line">mie.setId(<span class="string">"hokkien-prawn-mie"</span>);</span><br><span class="line">mie.setFood(<span class="string">"Hokkien Prawn Mie"</span>);</span><br><span class="line">mie.setTags(Arrays.asList(<span class="string">"noodles"</span>, <span class="string">"prawn"</span>));</span><br><span class="line"></span><br><span class="line">repository.save(Arrays.asList(hokkienPrawnMie));</span><br><span class="line"></span><br><span class="line"><span class="comment">// one line ommited</span></span><br><span class="line"></span><br><span class="line">Iterable&lt;Dish&gt; dishes = repository.findAll();</span><br><span class="line"></span><br><span class="line">Dish dish = repository.findOne(<span class="string">"hokkien-prawn-mie"</span>);</span><br></pre></td></tr></table></figure>
+<p>根据ID来查询文档没什么意思，你可以添加更多方法到你的接口里:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">DishRepository</span> </span><br><span class="line">  <span class="keyword">extends</span> <span class="title">ElasticsearchCrudRepository</span>&lt;<span class="title">Dish</span>, <span class="title">String</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;Dish&gt; <span class="title">findByFood</span><span class="params">(String food)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;Dish&gt; <span class="title">findByTagsAndFavoriteLocation</span><span class="params">(String tag, String location)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;Dish&gt; <span class="title">findByFavoritePriceLessThan</span><span class="params">(Double price)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Query</span>(<span class="string">"&#123;\"query\": &#123;\"match_all\": &#123;&#125;&#125;&#125;"</span>)</span><br><span class="line">    <span class="function">List&lt;Dish&gt; <span class="title">customFindAll</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大部分方法都是以findBy+属性名开头，比如findByFood会查询food属性，结构化查询也是支持的，比如上面的lessThan，上面这个接口会查询比给定价格少的dishes,最后这个查询使用不同的方式，可以使用Query注解来添加查询。</p>
+<p>更多关于Spring Data ElasticSearch的知识可以参考Spring的文档:<a href="http://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#project" target="_blank" rel="external">http://docs.spring.io/spring-data/elasticsearch/docs/current/reference/html/#project</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上面介绍了几种常用的ElasticSearch Java客户端，可以针对实际使用场景来选择。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[MyBatis简明教程]]></title>
       <url>http://www.ezlippi.com/blog/2017/02/mybatis-intorduction.html</url>
       <content type="html"><![CDATA[<p>MyBatis是一个优秀的ORM(对象关系映射)框架，和Hibernate不太一样，Hibernate不用你编写一行SQL语句，而MyBatis需要手写SQL语句，优点就是能够灵活调试SQL语句。这篇文章主要对MyBatis的几个核心概念进行介绍，以及如何在项目中使用MyBatis。<br><a id="more"></a></p>
@@ -6421,6 +6505,166 @@ synchronized (taskList) {
     </entry>
     
     <entry>
+      <title><![CDATA[AndroidPN消息推送]]></title>
+      <url>http://www.ezlippi.com/blog/2014/10/androidDP-introduction.html</url>
+      <content type="html"><![CDATA[<p>Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。</p>
+<p>客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。<br><a id="more"></a><br>   服务器是基于开源的openfire工程，采用java语言实现和Spring框架提供Web服务。主要有两个部分，一个是侦听在5222端口上的XMPP服务，负责与客户端的XMPPConnection类进行通信，作用是用户注册和身份认证，并推送消息。另外是Web服务器，采用一个轻量级的HTTP服务器，负责接收用户的Web请求。</p>
+<p>   整个基于XMPP的通信中，服务器端和客户端的通信是基于一个session（会话）过程，会话开始，首先客户端会指定端口号，然后把准备的连接信息发送到服务器端，客户端通过XMPP协议做的只有接收消息，其他的管理连接和保存消息等都由服务器负责。消息的传递是以根节点<stream>为起始，以</stream>为结束。</p>
+<p>   服务器和客户端建立Tcp连接过程如下。首先，建立会话协商，Client 准备connecting to server (127.0.0.1:5222)。其次，服务器询问Client所支持的安全认证。再者，Client发送给服务器要注册的用户。然后，Client根据服务器的要求提交用户信息。最后，Client关闭注册的STREAM元素。</p>
+<hr>
+<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><p>Client这边包含有消息的收发，解析以及持久连接的发起，重连等功能呢，十分强大，我们开发时完全不用管底层的连接，也不用担心断线，可以专注于业务部分的开发。</p>
+<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>XmppManager是Client的主控制器，主要用来管理连接信息，包括XMPP端口、IP地址、登录的用户名和密码，以及对连接的维护。</p>
+<h2 id="消息解析处理"><a href="#消息解析处理" class="headerlink" title="消息解析处理"></a>消息解析处理</h2><p>NotificationIQ、NotificationPackerListener以及NotificationIQProvider三个类负责对收到的Notification格式的消息进行解析和处理。</p>
+<h2 id="手机状态监听"><a href="#手机状态监听" class="headerlink" title="手机状态监听"></a>手机状态监听</h2><p>PersistentConnetcionListener、PhoneStateChangeListener以及ReconnectionThread三个类负责监听手机状态和断线重连。</p>
+<p>同时，代码结构也很简单。去除android的Service和BroadCast类以及一些工具类和常量类不谈：</p>
+<p>1.NotificationIQ,NotificationIQProvider,NotificationPacketListener三个类负责对收到的Notification格式的消息进行解析和处理，</p>
+<p>2.XmppManager是主控制器，NotificationService通过这个类，在后台维护androidpn连接。</p>
+<p>3.PersistentConnectionListener，PhoneStateChangeListener，ReconnectionThread.java三个类则负责监听手机的状态并进行断线重连。</p>
+<p>我们自定义消息时需要定义3个类：在NotificationIQ中定义消息的实体，在NotificationIQProvider中将消息转化为NotificationIQ实体，在NotificationPacketListener中对实体进行处理，具体的实现可参考NotificationIQ,NotificationIQProvider,NotificationPacketListener三个类。在定义这些类之后，还需要在XmppManager中将这3个类中注册到connection中，代码如下：</p>
+<pre><code>connection.connect();
+Log.i(LOGTAG, &quot;XMPP connected successfully&quot;);
+// packet provider
+ProviderManager.getInstance().addIQProvider(&quot;message&quot;,
+Constants.NOTIFICATION_NAMESPACE,
+new NotificationIQProvider());
+//packet filter
+PacketFilter packetFilter = new PacketTypeFilter(
+NotificationIQ.class);
+// packet listener
+PacketListener packetListener = xmppManager.getNotificationPacketListener();
+connection.addPacketListener(packetListener, packetFilter);
+</code></pre><p>需要注意的是，注册NotificationIQProvider时，传入的namespace需要和服务端组装消息时使用的namespace一致，才能正确的收到。</p>
+<h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>Client在与服务器建立connection后，首先会提交注册任务，在Androidpn项目中，用户注册是采用UUID（通用唯一标识码）来实现的，其每次登录都会利用这个UUID.randomUUID()来产生一个用户名和密码，而且不会重复。</p>
+<p>注册方法根据Server的格式要求组装注册消息，发送到服务器，同时使用在connection中添加监听，来获取服务器返回的消息packet。Client会根据消息的类型来判断是否注册成功。</p>
+<p>服务端收到Client的注册请求，会通过路由类router来转发到相应的Handler处理，router首先会读取Client发来包Packet的Namespace部分，根据XMPP RFC协议注册packet的namespace为jabber:iq:register，授权packet的namespace为jabber:iq:auth，由此转发到IQRegisterHandler处理注册请求。</p>
+<p>如果注册成功，Client会把相应的用户名、密码通过SharePerence保存在Client的共享文件AndroidpnClient中。此外，AndroidpnClient还保存了当前应用的包名、类名、服务器地址、端口、客户端版本、设备ID等。</p>
+<h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>Client的登录是在注册之后进行的，在Client的XmppManager类中，建立连接的时候首先会提交登录任务，然而在提交登录任务的时候都有一个submitRegisterTask()方法，可知，每次登录都会首先提交一个注册任务。</p>
+<p>登录的时候，要先通过isAuthenticated()方法判断是否授权，授权处理同样会通过connection发送到服务端，服务端会根据packet的namespace部分进行解析，然后路由类router会根据namespace转发到IQAuthHandler处理。</p>
+<p>Client收到服务端返回的消息packet，会使用connection的监听器异步接收消息，并通过XmppManager的context的sendBroadcast(Intentintent)以广播发送出去。</p>
+<p>基于tomcat的项目源码<a href="http://pan.baidu.com/s/1kTDUQWJ" target="_blank" rel="external">http://pan.baidu.com/s/1kTDUQWJ</a></p>
+<hr>
+<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><p>服务端架构依赖spring、mina框架，spring完成java Ben管理，mina完成网络通信。另外，服务端还通过jetty潜入了Admin Console Web界面功能。对于spring的依赖导致要把androidpn-server整合潜入项目中时，要考虑和自己项目本身spring环境的整合问题，可能要改造androidpn-server源代码，具体要看项目中spring的环境。对于mina的依赖不存在这个问题，因为mina是类库型框架，而spring是容器型框架。androidpn-server对jetty的使用不是可选的，而是和jetty绑定的，所以要不使用jetty就必须对androidpn-server的源代码进行改造。</p>
+<p>另外，对数据的存储使用hibernate框架，androidpn-server在使用hibernate时配置通过ehcache实现二级缓存。官方默认使用的数据库是HSQLDB数据库，你可以改用其他数据库。HSQLDB是用java语言实现的数据库，对其使用请自己学习。Androidpn-server通过In-Process模式（作为应用程序的一部分潜入应用程序）使用HSQLDB的。</p>
+<p>  服务器主要由以下几个包组成：</p>
+<ul>
+<li><p>org.androidpn.server.xmpp异常类型定义，包含程序入口类XmppServer。</p>
+</li>
+<li><p>org.androidpn.server.util加载配置文件，获取主机和端口等信息。</p>
+</li>
+<li><p>org.androidpn.server.xmpp.codec是XMPP协议的XML文件解析包，server  </p>
+</li>
+</ul>
+<p>收到和发送的消息都要通过这个包来进行xmpp协议编码和解码。</p>
+<ul>
+<li><p>org.androidpn.server.xmpp.handler负责对不同类型的消息进行处理</p>
+</li>
+<li><p>org.androidpn.server.xmpp.net负责维护与client之间的持久连接，并实现了一些传输方式供发送xmpp消息时使用。</p>
+</li>
+<li><p>org.androidpn.server.xmpp.ssl是对连接进行ssl认证的工具包。</p>
+</li>
+<li><p>org.androidpn.server.xmpp.router包负责将收到的信息包发送到相应的handler进行处理，是一个路由包。</p>
+</li>
+<li><p>org.androidpn.server.xmpp.presence里面只包含PresenceManager类，用来维护client的在线状态。</p>
+</li>
+<li><p>org.androidpn.server.xmpp.push包里面的NotificationManager类包含有向client发送消息的接口。</p>
+<p><strong>服务器中使用ServerStarter类启动服务，服务启动后使用XmppServer来管理连接、加载配置等。</strong></p>
+</li>
+</ul>
+<p>服务器接收处理消息流程</p>
+<p>① connection接收到来着Client的packet，使用包codec解码。</p>
+<p>② 路由包router根据packet的namespace等信息，将packet路由到相应的Handler。</p>
+<p>③ Handler开始处理。</p>
+<p>开发中只要根据client发送消息的格式，定义自己的router和handler类，然后在PacketRouter中注册router，在IQRouter中注册handler即可。</p>
+<p><strong>服务器发送消息的流程</strong></p>
+<p>① 使用NotificationManager接口的push方法。</p>
+<p>② 使用SessionManager在Session集合查找相应的client连接。</p>
+<p>③ 定义和组装XMPP消息，通过session向client发送。</p>
+<p>在这个流程中我们需要修改的是步骤3，也就是需要定义和组装自己的xmpp消息，以便于将适当的信息传到客户端并便于客户端解析。一个简单的消息组装例子如下：</p>
+<pre><code>private IQ  createMessageIQ(String title, String message, String userId,String json) {
+Element notification =  DocumentHelper.createElement(QName.get(
+&quot;message&quot;,  INQURIE_NAMESPACE));
+notification.addElement(&quot;title&quot;).setText(title);
+notification.addElement(&quot;text&quot;).setText(message);
+notification.addElement(&quot;userId&quot;).setText(userId);
+notification.addElement(&quot;json&quot;).setText(json);
+IQ iq = new IQ();
+iq.setType(IQ.Type.set);
+iq.setChildElement(notification);
+return iq;
+}
+</code></pre><p>要注意的是在创建element的时候，传入的namespace要和client解析使用的namespace相匹配。</p>
+<p><strong>独立部署使用</strong></p>
+<p>独立部署使用不需要对androidpn-server源代码进行任何改造，目录结构见上图，只需要修改好配置文件即可，配置文件在conf文件夹下，下面对需要注意的配置项进行说明，其他配置项目使用默认配置就可。</p>
+<p>对于config.properties的配置说明如下：</p>
+<p>apiKey=1234567890 #暂时发现没什么用处</p>
+<p>admin.console.host=127.0.0.1 #web管理控制界面jetty服务监听的地址</p>
+<p>admin.console.port=7070 #web管理控制界面jetty服务监听的端口</p>
+<p>对于spring-config.xml的配置说明：</p>
+<pre><code>&lt;bean id=&quot;ioAcceptor&quot; class=&quot;org.apache.mina.transport.socket.nio.NioSocketAcceptor&quot;init-method=&quot;bind&quot; destroy-method=&quot;unbind&quot;&gt;
+
+&lt;property name=&quot;defaultLocalAddress&quot; value=&quot;:5222&quot; /&gt; &lt;!--mina Socekt服务端监听端口，客户端配置和此配置一致--&gt;
+
+&lt;property name=&quot;handler&quot; ref=&quot;xmppHandler&quot; /&gt;
+
+&lt;property name=&quot;filterChainBuilder&quot; ref=&quot;filterChainBuilder&quot; /&gt;
+
+&lt;property name=&quot;reuseAddress&quot; value=&quot;true&quot; /&gt;
+
+&lt;/bean&gt;
+</code></pre><p>启动脚本在bin下，windowns和linux的脚本都有，需要配置系统环境变量JAVA_HOME，或者修改启动脚本将JAVA_HOME指定为你本机的具体地址，运行run脚本androidpn启动成功，通过浏览器访问<a href="http://127.0.0.1:7070/就可看到console界面。" target="_blank" rel="external">http://127.0.0.1:7070/就可看到console界面。</a></p>
+<p>其他项目通过http方式将需要发送的消息提交给androidpn-server服务，由androidpn-server完成客户端消息推送。</p>
+<p>具体应用可以通过程序代码编写方式访问<a href="http://192.168.1.24:7070/notification.do地址，将需要的参数以post方式提交。" target="_blank" rel="external">http://192.168.1.24:7070/notification.do地址，将需要的参数以post方式提交。</a></p>
+<p>嵌入项目使用<br>若要将androidpn作为应用程序的一部分潜入项目中使用，需要对androidpn-server源代码进行改造。</p>
+<p><strong>情况一：若你的项目中没有用到spring</strong></p>
+<p>这种情况不用考虑androidpn的spring和你项目中spring配置的融合问题，直接因为spring就可以了，配置文件使用androidpn默认配置文件名称spring-config.xml。配置文件都放在classpath下。</p>
+<p>需要在config.properties配置文件中增加配置server.home.dir选项，值指向一个目录，如：server.home.dir=F:\android\download\androidpn-server-0.5.0，该目录下要有子目录conf\security，目录下要放两个文件keystore和truststore，用来进行SSL安全传输用的密钥和证书，利用androdpn-server自带的就可以。</p>
+<p>接下来就是修改org.androidpn.server.xmpp. XmppServer类，将启动admin console的代码注释掉，如下截图红框框住的部分。如果你需要启动admin console的话，需要将原始androidpn中console文件夹放到合适的路径下，这个还没有试。</p>
+<p><strong>Androidpn-server主启动类</strong></p>
+<p>org.androidpn.server.xmpp.XmppServer修改完后，你就可以在你的应用程序这样调用：</p>
+<p>XmppServerserver = XmppServer.getInstance();</p>
+<p>这样XmppServer通过加载spring启动了mina监听服务，这时手机客户端应用已经可以连接服务端了。</p>
+<p>你的应用程序需要推送消息时，实例化</p>
+<p>org.androidpn.server.xmpp.push.NotificationManager，调用其提供的sendBroadcast和sendNotifcationToUser方法，如下代码调用：</p>
+<pre><code>NotificationManager notificationManager = new NotificationManager();
+notificationManager.sendBroadcast(&quot;1234567890&quot;, &quot;Hello&quot;,&quot;Hello BalanceJia!&quot;, &quot;uri&quot;);
+或
+notificationManager.sendNotifcationToUser(apiKey,username, title, message, uri);
+</code></pre><p><strong>情况二：若你的项目中用到spring</strong></p>
+<p>和你的项目中spring配置融合，需要注意spring容器不能重复启动的问题。所以要将androidpn-server的spring配置增加到你的spring配置中，需要修改XmppServer启动spring的地方，另外androidpn-server spring中配置的ben名字和你项目中的本名字不能重复，因为androidpn-server中用到的ben  id有：dataSource、dataSource、transactionManager、userDao、userService。还有数据源冲突的问题。</p>
+<p><strong>情况三：基于tomcat部署</strong></p>
+<p>1.依据ServerStart类写一个servlet，在servlet中启动时创建XmppServer实例。然后在web.xml中配置为自启动。</p>
+<p>2.将androidpn自带的配置目录conf拷贝到WEB-INF下面，并且把spring-config.xml文件从conf目录移动到WEB-INF目录。</p>
+<p>3.修改默认的spring-config.xml文件，在文件schema的头部<beans>下面加入如下内容<import resource="applicationContext.xml">，其中，加载顺序会默认先加载applicationContext文件，然后会加载spring-config文件后面的内容。</import></beans></p>
+<p>原因是spring-config文件中有个<bean id="xmppHandler" ...="">组件会在web服务启动的时候加载，该组件也会初始化XmppServer，导致与servlet的加载发生冲突。</bean></p>
+<p>由于未使用使用hibernate-cfg.xml文件，需要在spring-config文件加入如下内容：</p>
+<pre><code>&lt;bean id=&quot;sessionFactory&quot;
+   class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
+   &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;
+   &lt;property name=&quot;mappingResources&quot; &gt;
+  &lt;list&gt;
+&lt;value&gt;org/androidpn/server/model/User.hbm.xml&lt;/value&gt;
+  &lt;/list&gt;
+&lt;/property&gt;
+&lt;property name=&quot;hibernateProperties&quot;&gt;
+   &lt;props&gt;
+ &lt;prop key=&quot;hibernate.dialect&quot;&gt;
+  org.hibernate.dialect.SQLServerDialect
+ &lt;/prop&gt;
+ &lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
+ &lt;prop key=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/prop&gt;
+  &lt;/props&gt;
+ &lt;/property&gt;
+ &lt;/bean&gt;
+</code></pre><p>在spring-config.xml文件中，配置组件<bean: id="ioAcceptor">的listenrPort属性</bean:></p>
+<pre><code>&lt;bean id=&quot;listenrPort&quot; class=&quot;java.net.InetSocketAddress&quot;&gt;
+ &lt;constructor-arg value=&quot;localhost&quot;/&gt;
+ &lt;constructor-arg value=&quot;5222&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><p>此外，Androidpn默认采用spring-mvc方式配置，所以需要修改action指向。修改org.androidpn.server.console.controller包下面的三个类，改为继承自struct2的ActionSupport方式，并修改默认的调用方法，然后配置struct.xml文件。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Smack开发手册]]></title>
       <url>http://www.ezlippi.com/blog/2014/10/how%20to%20use%20smack.html</url>
       <content type="html"><![CDATA[<p>这篇文章翻译自Smack的官方文档，<a href="http://www.igniterealtime.org/builds/smack/docs/latest/documentation/" target="_blank" rel="external">http://www.igniterealtime.org/builds/smack/docs/latest/documentation/</a>，转载请注明出处。</p>
@@ -6707,166 +6951,6 @@ int favoriteNumber = ((Integer)message.getProperty(&quot;favoriteNumber&quot;)).
     </entry>
     
     <entry>
-      <title><![CDATA[AndroidPN消息推送]]></title>
-      <url>http://www.ezlippi.com/blog/2014/10/androidDP-introduction.html</url>
-      <content type="html"><![CDATA[<p>Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。</p>
-<p>客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。<br><a id="more"></a><br>   服务器是基于开源的openfire工程，采用java语言实现和Spring框架提供Web服务。主要有两个部分，一个是侦听在5222端口上的XMPP服务，负责与客户端的XMPPConnection类进行通信，作用是用户注册和身份认证，并推送消息。另外是Web服务器，采用一个轻量级的HTTP服务器，负责接收用户的Web请求。</p>
-<p>   整个基于XMPP的通信中，服务器端和客户端的通信是基于一个session（会话）过程，会话开始，首先客户端会指定端口号，然后把准备的连接信息发送到服务器端，客户端通过XMPP协议做的只有接收消息，其他的管理连接和保存消息等都由服务器负责。消息的传递是以根节点<stream>为起始，以</stream>为结束。</p>
-<p>   服务器和客户端建立Tcp连接过程如下。首先，建立会话协商，Client 准备connecting to server (127.0.0.1:5222)。其次，服务器询问Client所支持的安全认证。再者，Client发送给服务器要注册的用户。然后，Client根据服务器的要求提交用户信息。最后，Client关闭注册的STREAM元素。</p>
-<hr>
-<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><p>Client这边包含有消息的收发，解析以及持久连接的发起，重连等功能呢，十分强大，我们开发时完全不用管底层的连接，也不用担心断线，可以专注于业务部分的开发。</p>
-<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>XmppManager是Client的主控制器，主要用来管理连接信息，包括XMPP端口、IP地址、登录的用户名和密码，以及对连接的维护。</p>
-<h2 id="消息解析处理"><a href="#消息解析处理" class="headerlink" title="消息解析处理"></a>消息解析处理</h2><p>NotificationIQ、NotificationPackerListener以及NotificationIQProvider三个类负责对收到的Notification格式的消息进行解析和处理。</p>
-<h2 id="手机状态监听"><a href="#手机状态监听" class="headerlink" title="手机状态监听"></a>手机状态监听</h2><p>PersistentConnetcionListener、PhoneStateChangeListener以及ReconnectionThread三个类负责监听手机状态和断线重连。</p>
-<p>同时，代码结构也很简单。去除android的Service和BroadCast类以及一些工具类和常量类不谈：</p>
-<p>1.NotificationIQ,NotificationIQProvider,NotificationPacketListener三个类负责对收到的Notification格式的消息进行解析和处理，</p>
-<p>2.XmppManager是主控制器，NotificationService通过这个类，在后台维护androidpn连接。</p>
-<p>3.PersistentConnectionListener，PhoneStateChangeListener，ReconnectionThread.java三个类则负责监听手机的状态并进行断线重连。</p>
-<p>我们自定义消息时需要定义3个类：在NotificationIQ中定义消息的实体，在NotificationIQProvider中将消息转化为NotificationIQ实体，在NotificationPacketListener中对实体进行处理，具体的实现可参考NotificationIQ,NotificationIQProvider,NotificationPacketListener三个类。在定义这些类之后，还需要在XmppManager中将这3个类中注册到connection中，代码如下：</p>
-<pre><code>connection.connect();
-Log.i(LOGTAG, &quot;XMPP connected successfully&quot;);
-// packet provider
-ProviderManager.getInstance().addIQProvider(&quot;message&quot;,
-Constants.NOTIFICATION_NAMESPACE,
-new NotificationIQProvider());
-//packet filter
-PacketFilter packetFilter = new PacketTypeFilter(
-NotificationIQ.class);
-// packet listener
-PacketListener packetListener = xmppManager.getNotificationPacketListener();
-connection.addPacketListener(packetListener, packetFilter);
-</code></pre><p>需要注意的是，注册NotificationIQProvider时，传入的namespace需要和服务端组装消息时使用的namespace一致，才能正确的收到。</p>
-<h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p>Client在与服务器建立connection后，首先会提交注册任务，在Androidpn项目中，用户注册是采用UUID（通用唯一标识码）来实现的，其每次登录都会利用这个UUID.randomUUID()来产生一个用户名和密码，而且不会重复。</p>
-<p>注册方法根据Server的格式要求组装注册消息，发送到服务器，同时使用在connection中添加监听，来获取服务器返回的消息packet。Client会根据消息的类型来判断是否注册成功。</p>
-<p>服务端收到Client的注册请求，会通过路由类router来转发到相应的Handler处理，router首先会读取Client发来包Packet的Namespace部分，根据XMPP RFC协议注册packet的namespace为jabber:iq:register，授权packet的namespace为jabber:iq:auth，由此转发到IQRegisterHandler处理注册请求。</p>
-<p>如果注册成功，Client会把相应的用户名、密码通过SharePerence保存在Client的共享文件AndroidpnClient中。此外，AndroidpnClient还保存了当前应用的包名、类名、服务器地址、端口、客户端版本、设备ID等。</p>
-<h2 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h2><p>Client的登录是在注册之后进行的，在Client的XmppManager类中，建立连接的时候首先会提交登录任务，然而在提交登录任务的时候都有一个submitRegisterTask()方法，可知，每次登录都会首先提交一个注册任务。</p>
-<p>登录的时候，要先通过isAuthenticated()方法判断是否授权，授权处理同样会通过connection发送到服务端，服务端会根据packet的namespace部分进行解析，然后路由类router会根据namespace转发到IQAuthHandler处理。</p>
-<p>Client收到服务端返回的消息packet，会使用connection的监听器异步接收消息，并通过XmppManager的context的sendBroadcast(Intentintent)以广播发送出去。</p>
-<p>基于tomcat的项目源码<a href="http://pan.baidu.com/s/1kTDUQWJ" target="_blank" rel="external">http://pan.baidu.com/s/1kTDUQWJ</a></p>
-<hr>
-<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><p>服务端架构依赖spring、mina框架，spring完成java Ben管理，mina完成网络通信。另外，服务端还通过jetty潜入了Admin Console Web界面功能。对于spring的依赖导致要把androidpn-server整合潜入项目中时，要考虑和自己项目本身spring环境的整合问题，可能要改造androidpn-server源代码，具体要看项目中spring的环境。对于mina的依赖不存在这个问题，因为mina是类库型框架，而spring是容器型框架。androidpn-server对jetty的使用不是可选的，而是和jetty绑定的，所以要不使用jetty就必须对androidpn-server的源代码进行改造。</p>
-<p>另外，对数据的存储使用hibernate框架，androidpn-server在使用hibernate时配置通过ehcache实现二级缓存。官方默认使用的数据库是HSQLDB数据库，你可以改用其他数据库。HSQLDB是用java语言实现的数据库，对其使用请自己学习。Androidpn-server通过In-Process模式（作为应用程序的一部分潜入应用程序）使用HSQLDB的。</p>
-<p>  服务器主要由以下几个包组成：</p>
-<ul>
-<li><p>org.androidpn.server.xmpp异常类型定义，包含程序入口类XmppServer。</p>
-</li>
-<li><p>org.androidpn.server.util加载配置文件，获取主机和端口等信息。</p>
-</li>
-<li><p>org.androidpn.server.xmpp.codec是XMPP协议的XML文件解析包，server  </p>
-</li>
-</ul>
-<p>收到和发送的消息都要通过这个包来进行xmpp协议编码和解码。</p>
-<ul>
-<li><p>org.androidpn.server.xmpp.handler负责对不同类型的消息进行处理</p>
-</li>
-<li><p>org.androidpn.server.xmpp.net负责维护与client之间的持久连接，并实现了一些传输方式供发送xmpp消息时使用。</p>
-</li>
-<li><p>org.androidpn.server.xmpp.ssl是对连接进行ssl认证的工具包。</p>
-</li>
-<li><p>org.androidpn.server.xmpp.router包负责将收到的信息包发送到相应的handler进行处理，是一个路由包。</p>
-</li>
-<li><p>org.androidpn.server.xmpp.presence里面只包含PresenceManager类，用来维护client的在线状态。</p>
-</li>
-<li><p>org.androidpn.server.xmpp.push包里面的NotificationManager类包含有向client发送消息的接口。</p>
-<p><strong>服务器中使用ServerStarter类启动服务，服务启动后使用XmppServer来管理连接、加载配置等。</strong></p>
-</li>
-</ul>
-<p>服务器接收处理消息流程</p>
-<p>① connection接收到来着Client的packet，使用包codec解码。</p>
-<p>② 路由包router根据packet的namespace等信息，将packet路由到相应的Handler。</p>
-<p>③ Handler开始处理。</p>
-<p>开发中只要根据client发送消息的格式，定义自己的router和handler类，然后在PacketRouter中注册router，在IQRouter中注册handler即可。</p>
-<p><strong>服务器发送消息的流程</strong></p>
-<p>① 使用NotificationManager接口的push方法。</p>
-<p>② 使用SessionManager在Session集合查找相应的client连接。</p>
-<p>③ 定义和组装XMPP消息，通过session向client发送。</p>
-<p>在这个流程中我们需要修改的是步骤3，也就是需要定义和组装自己的xmpp消息，以便于将适当的信息传到客户端并便于客户端解析。一个简单的消息组装例子如下：</p>
-<pre><code>private IQ  createMessageIQ(String title, String message, String userId,String json) {
-Element notification =  DocumentHelper.createElement(QName.get(
-&quot;message&quot;,  INQURIE_NAMESPACE));
-notification.addElement(&quot;title&quot;).setText(title);
-notification.addElement(&quot;text&quot;).setText(message);
-notification.addElement(&quot;userId&quot;).setText(userId);
-notification.addElement(&quot;json&quot;).setText(json);
-IQ iq = new IQ();
-iq.setType(IQ.Type.set);
-iq.setChildElement(notification);
-return iq;
-}
-</code></pre><p>要注意的是在创建element的时候，传入的namespace要和client解析使用的namespace相匹配。</p>
-<p><strong>独立部署使用</strong></p>
-<p>独立部署使用不需要对androidpn-server源代码进行任何改造，目录结构见上图，只需要修改好配置文件即可，配置文件在conf文件夹下，下面对需要注意的配置项进行说明，其他配置项目使用默认配置就可。</p>
-<p>对于config.properties的配置说明如下：</p>
-<p>apiKey=1234567890 #暂时发现没什么用处</p>
-<p>admin.console.host=127.0.0.1 #web管理控制界面jetty服务监听的地址</p>
-<p>admin.console.port=7070 #web管理控制界面jetty服务监听的端口</p>
-<p>对于spring-config.xml的配置说明：</p>
-<pre><code>&lt;bean id=&quot;ioAcceptor&quot; class=&quot;org.apache.mina.transport.socket.nio.NioSocketAcceptor&quot;init-method=&quot;bind&quot; destroy-method=&quot;unbind&quot;&gt;
-
-&lt;property name=&quot;defaultLocalAddress&quot; value=&quot;:5222&quot; /&gt; &lt;!--mina Socekt服务端监听端口，客户端配置和此配置一致--&gt;
-
-&lt;property name=&quot;handler&quot; ref=&quot;xmppHandler&quot; /&gt;
-
-&lt;property name=&quot;filterChainBuilder&quot; ref=&quot;filterChainBuilder&quot; /&gt;
-
-&lt;property name=&quot;reuseAddress&quot; value=&quot;true&quot; /&gt;
-
-&lt;/bean&gt;
-</code></pre><p>启动脚本在bin下，windowns和linux的脚本都有，需要配置系统环境变量JAVA_HOME，或者修改启动脚本将JAVA_HOME指定为你本机的具体地址，运行run脚本androidpn启动成功，通过浏览器访问<a href="http://127.0.0.1:7070/就可看到console界面。" target="_blank" rel="external">http://127.0.0.1:7070/就可看到console界面。</a></p>
-<p>其他项目通过http方式将需要发送的消息提交给androidpn-server服务，由androidpn-server完成客户端消息推送。</p>
-<p>具体应用可以通过程序代码编写方式访问<a href="http://192.168.1.24:7070/notification.do地址，将需要的参数以post方式提交。" target="_blank" rel="external">http://192.168.1.24:7070/notification.do地址，将需要的参数以post方式提交。</a></p>
-<p>嵌入项目使用<br>若要将androidpn作为应用程序的一部分潜入项目中使用，需要对androidpn-server源代码进行改造。</p>
-<p><strong>情况一：若你的项目中没有用到spring</strong></p>
-<p>这种情况不用考虑androidpn的spring和你项目中spring配置的融合问题，直接因为spring就可以了，配置文件使用androidpn默认配置文件名称spring-config.xml。配置文件都放在classpath下。</p>
-<p>需要在config.properties配置文件中增加配置server.home.dir选项，值指向一个目录，如：server.home.dir=F:\android\download\androidpn-server-0.5.0，该目录下要有子目录conf\security，目录下要放两个文件keystore和truststore，用来进行SSL安全传输用的密钥和证书，利用androdpn-server自带的就可以。</p>
-<p>接下来就是修改org.androidpn.server.xmpp. XmppServer类，将启动admin console的代码注释掉，如下截图红框框住的部分。如果你需要启动admin console的话，需要将原始androidpn中console文件夹放到合适的路径下，这个还没有试。</p>
-<p><strong>Androidpn-server主启动类</strong></p>
-<p>org.androidpn.server.xmpp.XmppServer修改完后，你就可以在你的应用程序这样调用：</p>
-<p>XmppServerserver = XmppServer.getInstance();</p>
-<p>这样XmppServer通过加载spring启动了mina监听服务，这时手机客户端应用已经可以连接服务端了。</p>
-<p>你的应用程序需要推送消息时，实例化</p>
-<p>org.androidpn.server.xmpp.push.NotificationManager，调用其提供的sendBroadcast和sendNotifcationToUser方法，如下代码调用：</p>
-<pre><code>NotificationManager notificationManager = new NotificationManager();
-notificationManager.sendBroadcast(&quot;1234567890&quot;, &quot;Hello&quot;,&quot;Hello BalanceJia!&quot;, &quot;uri&quot;);
-或
-notificationManager.sendNotifcationToUser(apiKey,username, title, message, uri);
-</code></pre><p><strong>情况二：若你的项目中用到spring</strong></p>
-<p>和你的项目中spring配置融合，需要注意spring容器不能重复启动的问题。所以要将androidpn-server的spring配置增加到你的spring配置中，需要修改XmppServer启动spring的地方，另外androidpn-server spring中配置的ben名字和你项目中的本名字不能重复，因为androidpn-server中用到的ben  id有：dataSource、dataSource、transactionManager、userDao、userService。还有数据源冲突的问题。</p>
-<p><strong>情况三：基于tomcat部署</strong></p>
-<p>1.依据ServerStart类写一个servlet，在servlet中启动时创建XmppServer实例。然后在web.xml中配置为自启动。</p>
-<p>2.将androidpn自带的配置目录conf拷贝到WEB-INF下面，并且把spring-config.xml文件从conf目录移动到WEB-INF目录。</p>
-<p>3.修改默认的spring-config.xml文件，在文件schema的头部<beans>下面加入如下内容<import resource="applicationContext.xml">，其中，加载顺序会默认先加载applicationContext文件，然后会加载spring-config文件后面的内容。</import></beans></p>
-<p>原因是spring-config文件中有个<bean id="xmppHandler" ...="">组件会在web服务启动的时候加载，该组件也会初始化XmppServer，导致与servlet的加载发生冲突。</bean></p>
-<p>由于未使用使用hibernate-cfg.xml文件，需要在spring-config文件加入如下内容：</p>
-<pre><code>&lt;bean id=&quot;sessionFactory&quot;
-   class=&quot;org.springframework.orm.hibernate3.LocalSessionFactoryBean&quot;&gt;
-   &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;
-   &lt;property name=&quot;mappingResources&quot; &gt;
-  &lt;list&gt;
-&lt;value&gt;org/androidpn/server/model/User.hbm.xml&lt;/value&gt;
-  &lt;/list&gt;
-&lt;/property&gt;
-&lt;property name=&quot;hibernateProperties&quot;&gt;
-   &lt;props&gt;
- &lt;prop key=&quot;hibernate.dialect&quot;&gt;
-  org.hibernate.dialect.SQLServerDialect
- &lt;/prop&gt;
- &lt;prop key=&quot;hibernate.show_sql&quot;&gt;true&lt;/prop&gt;
- &lt;prop key=&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;/prop&gt;
-  &lt;/props&gt;
- &lt;/property&gt;
- &lt;/bean&gt;
-</code></pre><p>在spring-config.xml文件中，配置组件<bean: id="ioAcceptor">的listenrPort属性</bean:></p>
-<pre><code>&lt;bean id=&quot;listenrPort&quot; class=&quot;java.net.InetSocketAddress&quot;&gt;
- &lt;constructor-arg value=&quot;localhost&quot;/&gt;
- &lt;constructor-arg value=&quot;5222&quot;/&gt;
-&lt;/bean&gt;
-</code></pre><p>此外，Androidpn默认采用spring-mvc方式配置，所以需要修改action指向。修改org.androidpn.server.console.controller包下面的三个类，改为继承自struct2的ActionSupport方式，并修改默认的调用方法，然后配置struct.xml文件。</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[XMPP协议分析-原理]]></title>
       <url>http://www.ezlippi.com/blog/2014/10/xmpp.html</url>
       <content type="html"><![CDATA[<h1 id="XMPP协议简介"><a href="#XMPP协议简介" class="headerlink" title="XMPP协议简介"></a>XMPP协议简介</h1><p>XMPP协议（Extensible Messaging and PresenceProtocol，可扩展消息处理现场协议）是一种基于XML的协议，目的是为了解决及时通信标准而提出来的，最早是在Jabber上实现的。它继承了在XML环境中灵活的发展性。因此，基于XMPP的应用具有超强的可扩展性。并且XML很易穿过防火墙，所以用XMPP构建的应用不易受到防火墙的阻碍。利用XMPP作为通用的传输机制，不同组织内的不同应用都可以进行有效的通信。<br><a id="more"></a></p>
@@ -6894,7 +6978,7 @@ C2----+--G1===FN1===FC1
 <p><strong>（1）服务器</strong></p>
 <p>服务系统是XMPP通信的智能提取层，它主要负责：管理来自其他个体的会话连接或者XML流（streams）和来自客户端、服务器、其他个体的认证发送在XML流实体之中的适当的XML地址节点。大多数XMPP服务都允许存储一些客户端数据（比如联系人列表），在这种情况下，服务直接面向这个客户端处理XML数据，而不是其他个体。</p>
 <p><strong>（2）客户端</strong></p>
-<p>大多数客户端是通过TCP直接连接，并且使用XMPP获得服务器提供全部-12-第2章Jabber协议原理及其应用功能和其他服务。许多资源通过认证的客户端也许同时连接到服务器，定义在XMPP地址的每个资源是不同的（比如<a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x6e;&#x6f;&#x64;&#x65;&#x40;&#100;&#x6f;&#109;&#x61;&#x69;&#x6e;&#47;&#x68;&#111;&#x6d;&#x65;">&#x6e;&#x6f;&#x64;&#x65;&#x40;&#100;&#x6f;&#109;&#x61;&#x69;&#x6e;&#47;&#x68;&#111;&#x6d;&#x65;</a>和<a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x6e;&#x6f;&#x64;&#x65;&#64;&#x64;&#x6f;&#x6d;&#97;&#x69;&#110;&#x2f;&#119;&#x6f;&#x72;&#x6b;">&#x6e;&#x6f;&#x64;&#x65;&#64;&#x64;&#x6f;&#x6d;&#97;&#x69;&#110;&#x2f;&#119;&#x6f;&#x72;&#x6b;</a>）建议服务器和客户端采用的端中是5222。</p>
+<p>大多数客户端是通过TCP直接连接，并且使用XMPP获得服务器提供全部-12-第2章Jabber协议原理及其应用功能和其他服务。许多资源通过认证的客户端也许同时连接到服务器，定义在XMPP地址的每个资源是不同的（比如<a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6e;&#111;&#100;&#101;&#64;&#x64;&#x6f;&#109;&#97;&#x69;&#110;&#47;&#104;&#111;&#109;&#101;">&#x6e;&#111;&#100;&#101;&#64;&#x64;&#x6f;&#109;&#97;&#x69;&#110;&#47;&#104;&#111;&#109;&#101;</a>和<a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x6e;&#111;&#x64;&#101;&#x40;&#x64;&#x6f;&#x6d;&#97;&#x69;&#110;&#x2f;&#119;&#x6f;&#114;&#107;">&#x6e;&#111;&#x64;&#101;&#x40;&#x64;&#x6f;&#x6d;&#97;&#x69;&#110;&#x2f;&#119;&#x6f;&#114;&#107;</a>）建议服务器和客户端采用的端中是5222。</p>
 <p><strong>（3）网关</strong><br>它的主要功能是将XMPP协议转换成外部消息(non-XMPP)系统使用的协议,也将返回的数据转换成XMPP。这些通信是基于网关和服务器，基于网关和外部消息系统之间的。</p>
 <h2 id="XMPP消息格式"><a href="#XMPP消息格式" class="headerlink" title="XMPP消息格式"></a>XMPP消息格式</h2><p>Jabber/XMPP系统使用XML流在不同实体之间相互传输数据。在两个实体的连接期间，XML流将从一个实体传送到另一个实体。在实体间，有三个顶层的XML元素:<message>，<presence>和<iq>。每一个都包含属性和子节点。下面将分别描述这些元素。</iq></presence></message></p>
 <p><strong>1)消息(message)元素：</strong></p>
