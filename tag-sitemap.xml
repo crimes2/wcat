@@ -506,21 +506,7 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/jekyll/</loc>
-        <lastmod>2017-02-05T13:54:08.011Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.ezlippi.com/tags/blog/</loc>
-        <lastmod>2017-02-05T13:54:08.011Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.ezlippi.com/tags/hexo/</loc>
         <lastmod>2017-02-05T13:54:08.011Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -541,43 +527,57 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/SED/</loc>
-        <lastmod>2017-02-09T13:13:05.328Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.ezlippi.com/tags/MyBatis/</loc>
-        <lastmod>2017-02-12T14:28:08.127Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.ezlippi.com/tags/ORM/</loc>
-        <lastmod>2017-02-12T14:28:08.127Z</lastmod>
+        <loc>http://www.ezlippi.com/tags/ElasticSearch/</loc>
+        <lastmod>2017-03-11T14:17:23.308Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.ezlippi.com/tags/Java/</loc>
-        <lastmod>2017-03-11T14:17:23.308Z</lastmod>
+        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/MyBatis/</loc>
+        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/ORM/</loc>
+        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.ezlippi.com/tags/DataBase/</loc>
-        <lastmod>2017-03-11T14:17:23.308Z</lastmod>
+        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/ElasticSearch/</loc>
-        <lastmod>2017-03-11T14:17:23.308Z</lastmod>
+        <loc>http://www.ezlippi.com/tags/jekyll/</loc>
+        <lastmod>2017-03-11T15:45:07.440Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/hexo/</loc>
+        <lastmod>2017-03-11T15:45:07.440Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/SED/</loc>
+        <lastmod>2017-03-11T15:48:16.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
