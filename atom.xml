@@ -907,8 +907,6 @@
       <category term="c/c++" scheme="http://www.ezlippi.com/categories/c-c/"/>
     
     
-      <category term="开源" scheme="http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
       <category term="C" scheme="http://www.ezlippi.com/tags/C/"/>
     
       <category term="C++" scheme="http://www.ezlippi.com/tags/C/"/>
@@ -916,6 +914,8 @@
       <category term="OpenSource" scheme="http://www.ezlippi.com/tags/OpenSource/"/>
     
       <category term="框架" scheme="http://www.ezlippi.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="开源" scheme="http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
@@ -1122,29 +1122,6 @@
   </entry>
   
   <entry>
-    <title>Androidpn 消息推送总结</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
-    <published>2014-10-30T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:27.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Androidpn 开源项目托管地址：&lt;a href=&quot;http://sourceforge.net/projects/androidpn/&quot;&gt;http://sourceforge.net/projects/androidpn/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Androidpn 开源项目自身描述：This is an open source project to provide push notification support for Android, a xmpp based notification server and a client tool kit.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
-    
-    
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
-    
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
-    
-  </entry>
-  
-  <entry>
     <title>XMPP协议分析-具体分析</title>
     <link href="http://www.ezlippi.com//blog/2014/10/xmpp-analise.html"/>
     <id>http://www.ezlippi.com//blog/2014/10/xmpp-analise.html</id>
@@ -1165,6 +1142,29 @@
       <category term="jabber" scheme="http://www.ezlippi.com/tags/jabber/"/>
     
       <category term="openfire" scheme="http://www.ezlippi.com/tags/openfire/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Androidpn 消息推送总结</title>
+    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
+    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
+    <published>2014-10-30T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:27.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Androidpn 开源项目托管地址：&lt;a href=&quot;http://sourceforge.net/projects/androidpn/&quot;&gt;http://sourceforge.net/projects/androidpn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Androidpn 开源项目自身描述：This is an open source project to provide push notification support for Android, a xmpp based notification server and a client tool kit.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+    
+    
+      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+    
+      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
