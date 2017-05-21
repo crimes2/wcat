@@ -1054,6 +1054,33 @@
   </entry>
   
   <entry>
+    <title>java中NIO与传统IO</title>
+    <link href="http://www.ezlippi.com//blog/2014/11/java-nio.html"/>
+    <id>http://www.ezlippi.com//blog/2014/11/java-nio.html</id>
+    <published>2014-10-31T16:00:00.000Z</published>
+    <updated>2016-03-01T05:17:06.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;感性认识：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;传统的&lt;/strong&gt;socket IO中，&lt;strong&gt;需要为每个连接创建一个线程&lt;/strong&gt;，当并发的连接数量非常巨大时，&lt;strong&gt;线程所占用的栈内存和CPU线程切换的开销&lt;/strong&gt;将非常巨大。使用&lt;strong&gt;NIO&lt;/strong&gt;，不再需要为每个线程创建单独的线程，可以用一个&lt;strong&gt;含有限数量线程的线程池&lt;/strong&gt;，甚至一个线程来为任意数量的连接服务。由于线程数量小于连接数量，所以每个线程进行IO操作时就不能阻塞，如果阻塞的话，有些连接就得不到处理，NIO提供了这种非阻塞的能力。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+    
+      <category term="NIO" scheme="http://www.ezlippi.com/tags/NIO/"/>
+    
+      <category term="IO" scheme="http://www.ezlippi.com/tags/IO/"/>
+    
+      <category term="阻塞" scheme="http://www.ezlippi.com/tags/%E9%98%BB%E5%A1%9E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何评价『黑客与画家』</title>
     <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
     <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
@@ -1095,29 +1122,25 @@
   </entry>
   
   <entry>
-    <title>java中NIO与传统IO</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/java-nio.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/java-nio.html</id>
-    <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-03-01T05:17:06.000Z</updated>
+    <title>Androidpn 消息推送总结</title>
+    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
+    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
+    <published>2014-10-30T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:27.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;感性认识：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;传统的&lt;/strong&gt;socket IO中，&lt;strong&gt;需要为每个连接创建一个线程&lt;/strong&gt;，当并发的连接数量非常巨大时，&lt;strong&gt;线程所占用的栈内存和CPU线程切换的开销&lt;/strong&gt;将非常巨大。使用&lt;strong&gt;NIO&lt;/strong&gt;，不再需要为每个线程创建单独的线程，可以用一个&lt;strong&gt;含有限数量线程的线程池&lt;/strong&gt;，甚至一个线程来为任意数量的连接服务。由于线程数量小于连接数量，所以每个线程进行IO操作时就不能阻塞，如果阻塞的话，有些连接就得不到处理，NIO提供了这种非阻塞的能力。&lt;/p&gt;
+      &lt;p&gt;Androidpn 开源项目托管地址：&lt;a href=&quot;http://sourceforge.net/projects/androidpn/&quot;&gt;http://sourceforge.net/projects/androidpn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Androidpn 开源项目自身描述：This is an open source project to provide push notification support for Android, a xmpp based notification server and a client tool kit.&lt;br&gt;
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
     
-      <category term="NIO" scheme="http://www.ezlippi.com/tags/NIO/"/>
-    
-      <category term="IO" scheme="http://www.ezlippi.com/tags/IO/"/>
-    
-      <category term="阻塞" scheme="http://www.ezlippi.com/tags/%E9%98%BB%E5%A1%9E/"/>
+      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
@@ -1146,16 +1169,16 @@
   </entry>
   
   <entry>
-    <title>Androidpn 消息推送总结</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
-    <published>2014-10-30T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:27.000Z</updated>
+    <title>AndroidPN消息推送</title>
+    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html"/>
+    <id>http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html</id>
+    <published>2014-10-29T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:13.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Androidpn 开源项目托管地址：&lt;a href=&quot;http://sourceforge.net/projects/androidpn/&quot;&gt;http://sourceforge.net/projects/androidpn/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Androidpn 开源项目自身描述：This is an open source project to provide push notification support for Android, a xmpp based notification server and a client tool kit.&lt;br&gt;
+      &lt;p&gt;Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。&lt;/p&gt;
+&lt;p&gt;客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。&lt;br&gt;
     
     </summary>
     
@@ -1164,7 +1187,7 @@
     
       <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
     
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
+      <category term="消息推送， server， client" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%EF%BC%8C-server%EF%BC%8C-client/"/>
     
   </entry>
   
@@ -1179,29 +1202,6 @@
     
       &lt;p&gt;这篇文章翻译自Smack的官方文档，&lt;a href=&quot;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&quot;&gt;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&lt;/a&gt;，转载请注明出处。&lt;/p&gt;
 &lt;p&gt;Smack是一个为使用XMPP服务器聊天和发送即时消息交流而提供的库。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
-    
-    
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
-    
-      <category term="消息推送， server， client" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%EF%BC%8C-server%EF%BC%8C-client/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidPN消息推送</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html</id>
-    <published>2014-10-29T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:13.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。&lt;/p&gt;
-&lt;p&gt;客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。&lt;br&gt;
     
     </summary>
     
@@ -1515,6 +1515,30 @@
   </entry>
   
   <entry>
+    <title>使用jekyll在Github上搭建博客</title>
+    <link href="http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html"/>
+    <id>http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html</id>
+    <published>2014-07-14T16:00:00.000Z</published>
+    <updated>2016-02-29T12:33:07.000Z</updated>
+    
+    <summary type="html">
+    
+      使用jekyll在Github上搭建博客
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
+    
+      <category term="reprints" scheme="http://www.ezlippi.com/categories/jekyll/reprints/"/>
+    
+    
+      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+    
+      <category term="github" scheme="http://www.ezlippi.com/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一个合格的程序员应该读过哪些书</title>
     <link href="http://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html"/>
     <id>http://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html</id>
@@ -1537,30 +1561,6 @@
       <category term="书籍" scheme="http://www.ezlippi.com/tags/%E4%B9%A6%E7%B1%8D/"/>
     
       <category term="程序" scheme="http://www.ezlippi.com/tags/%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用jekyll在Github上搭建博客</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html</id>
-    <published>2014-07-14T16:00:00.000Z</published>
-    <updated>2016-02-29T12:33:07.000Z</updated>
-    
-    <summary type="html">
-    
-      使用jekyll在Github上搭建博客
-    
-    </summary>
-    
-      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
-    
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/jekyll/reprints/"/>
-    
-    
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
-    
-      <category term="github" scheme="http://www.ezlippi.com/tags/github/"/>
     
   </entry>
   
