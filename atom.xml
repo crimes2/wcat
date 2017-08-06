@@ -907,6 +907,8 @@
       <category term="c/c++" scheme="http://www.ezlippi.com/categories/c-c/"/>
     
     
+      <category term="开源" scheme="http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
       <category term="C" scheme="http://www.ezlippi.com/tags/C/"/>
     
       <category term="C++" scheme="http://www.ezlippi.com/tags/C/"/>
@@ -914,8 +916,6 @@
       <category term="OpenSource" scheme="http://www.ezlippi.com/tags/OpenSource/"/>
     
       <category term="框架" scheme="http://www.ezlippi.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="开源" scheme="http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
@@ -1081,6 +1081,26 @@
   </entry>
   
   <entry>
+    <title>Android消息推送方式</title>
+    <link href="http://www.ezlippi.com//blog/2014/11/android-push.html"/>
+    <id>http://www.ezlippi.com//blog/2014/11/android-push.html</id>
+    <published>2014-10-31T16:00:00.000Z</published>
+    <updated>2016-03-01T05:16:43.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当我们开发需要和服务器交互的应用程序时，基本上都需要获取服务器端的数据，比如《地震及时通》就需要及时获取服务器上最新的地震信息。要获取服务器上不定时更新的信息一般来说有两种方法，第一种是客户端使用&lt;strong&gt;Pull（拉）&lt;/strong&gt;的方式，隔一段时间就去服务器上获取信息，看是否有更新的信息出现。第二种就是服务器使用&lt;strong&gt;Push（推送）&lt;/strong&gt;的方式，当服务器端有新信息了，则把最新的信息Push到客户端上。&lt;br&gt;虽然Pull和Push两种方式都能实现获取服务器端更新信息的功能，但是明显来说&lt;strong&gt;Push is better than pull&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;因为Pull方式更费客户端的网络流量，更主要的是费电量。&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+    
+    
+      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何评价『黑客与画家』</title>
     <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
     <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
@@ -1098,26 +1118,6 @@
     
     
       <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android消息推送方式</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/android-push.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/android-push.html</id>
-    <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-03-01T05:16:43.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;当我们开发需要和服务器交互的应用程序时，基本上都需要获取服务器端的数据，比如《地震及时通》就需要及时获取服务器上最新的地震信息。要获取服务器上不定时更新的信息一般来说有两种方法，第一种是客户端使用&lt;strong&gt;Pull（拉）&lt;/strong&gt;的方式，隔一段时间就去服务器上获取信息，看是否有更新的信息出现。第二种就是服务器使用&lt;strong&gt;Push（推送）&lt;/strong&gt;的方式，当服务器端有新信息了，则把最新的信息Push到客户端上。&lt;br&gt;虽然Pull和Push两种方式都能实现获取服务器端更新信息的功能，但是明显来说&lt;strong&gt;Push is better than pull&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;因为Pull方式更费客户端的网络流量，更主要的是费电量。&lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
-    
-    
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
@@ -1169,16 +1169,16 @@
   </entry>
   
   <entry>
-    <title>AndroidPN消息推送</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html</id>
+    <title>Smack开发手册</title>
+    <link href="http://www.ezlippi.com//blog/2014/10/how%20to%20use%20smack.html"/>
+    <id>http://www.ezlippi.com//blog/2014/10/how to use smack.html</id>
     <published>2014-10-29T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:13.000Z</updated>
+    <updated>2016-02-29T12:35:22.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。&lt;/p&gt;
-&lt;p&gt;客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。&lt;br&gt;
+      &lt;p&gt;这篇文章翻译自Smack的官方文档，&lt;a href=&quot;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&quot;&gt;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&lt;/a&gt;，转载请注明出处。&lt;/p&gt;
+&lt;p&gt;Smack是一个为使用XMPP服务器聊天和发送即时消息交流而提供的库。&lt;br&gt;
     
     </summary>
     
@@ -1192,16 +1192,16 @@
   </entry>
   
   <entry>
-    <title>Smack开发手册</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/how%20to%20use%20smack.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/how to use smack.html</id>
+    <title>AndroidPN消息推送</title>
+    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html"/>
+    <id>http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html</id>
     <published>2014-10-29T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:22.000Z</updated>
+    <updated>2016-02-29T12:35:13.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这篇文章翻译自Smack的官方文档，&lt;a href=&quot;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&quot;&gt;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&lt;/a&gt;，转载请注明出处。&lt;/p&gt;
-&lt;p&gt;Smack是一个为使用XMPP服务器聊天和发送即时消息交流而提供的库。&lt;br&gt;
+      &lt;p&gt;Androidpn是韩国Sehwan No写的开源消息推送项目，很多大公司都用这个消息推送方式构建自己的消息推送服务，缺点是导致客户端比较耗电。通信机制分别由客户端和服务器完成。&lt;/p&gt;
+&lt;p&gt;客户端采用基于java的XMPP协议包asmack（该包依赖于openfire下的开源项目smack）。通过该协议包提供的XMPPConnetcion类与服务器建立持久连接，并通过该连接进行用户注册和登录认证，以及接受服务器消息。&lt;br&gt;
     
     </summary>
     

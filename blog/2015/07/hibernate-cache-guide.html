@@ -384,7 +384,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/blog/2015/07/hibernate-cache-guide.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="/blog/2015/07/hibernate-cache-guide.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="/blog/2015/07/hibernate-cache-guide.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -590,25 +590,6 @@ column=&quot;customer_id&quot; cascade=&quot;save-update&quot;&gt;
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="/blog/2015/07/hibernate-cache-guide.html"
-     data-title="Hibernate缓存配置笔记"
-     data-content=""
-     data-url="http://www.ezlippi.com/blog/2015/07/hibernate-cache-guide.html">
-  <div class="ds-share-inline">
-    <ul  class="ds-share-icons-16">
-
-      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
-      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
-      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
-      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
-      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
-    </ul>
-    <div class="ds-share-icons-more">
-    </div>
-  </div>
-</div>
-      
     </div>
   </div>
 
@@ -616,15 +597,15 @@ column=&quot;customer_id&quot; cascade=&quot;save-update&quot;&gt;
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="monthly" data-num-items="4"></div>
-
 
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="/blog/2015/07/hibernate-cache-guide.html"
-           data-title="Hibernate缓存配置笔记" data-url="http://www.ezlippi.com/blog/2015/07/hibernate-cache-guide.html">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -802,7 +783,7 @@ column=&quot;customer_id&quot; cascade=&quot;save-update&quot;&gt;
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow">
     NexT.Mist
-  </a>
+  </a>- Hosted by Coding Pages
 </div>
 
 
@@ -903,32 +884,38 @@ column=&quot;customer_id&quot; cascade=&quot;save-update&quot;&gt;
 
   
 
-  
-    
-  
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"ezlippi"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
   
-    
-    
-    <script src="//cdn.jsdelivr.net/ua-parser.js/0.7.10/ua-parser.min.js"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
+    <script type="text/javascript">
+      var disqus_shortname = 'lippiouyang';
+      var disqus_identifier = '/blog/2015/07/hibernate-cache-guide.html';
+
+      var disqus_title = "Hibernate缓存配置笔记";
+
+
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
+
+    </script>
   
-
-
-
 
 
 

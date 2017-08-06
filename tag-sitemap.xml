@@ -282,6 +282,13 @@
     </url>
 
     <url>
+        <loc>http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/</loc>
+        <lastmod>2016-03-03T02:22:37.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.ezlippi.com/tags/C/</loc>
         <lastmod>2016-03-03T02:22:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -304,13 +311,6 @@
 
     <url>
         <loc>http://www.ezlippi.com/tags/%E6%A1%86%E6%9E%B6/</loc>
-        <lastmod>2016-03-03T02:22:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/</loc>
         <lastmod>2016-03-03T02:22:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
