@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.ezlippi.com/"/>
+  <link href="https://www.ezlippi.com/"/>
   <updated>2017-03-11T14:17:23.308Z</updated>
-  <id>http://www.ezlippi.com/</id>
+  <id>https://www.ezlippi.com/</id>
   
   <author>
     <name>EZLippi</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>ElasticSearch Java客户端介绍</title>
-    <link href="http://www.ezlippi.com//blog/2017/03/elasticsearch-java-client.html"/>
-    <id>http://www.ezlippi.com//blog/2017/03/elasticsearch-java-client.html</id>
+    <link href="https://www.ezlippi.com//blog/2017/03/elasticsearch-java-client.html"/>
+    <id>https://www.ezlippi.com//blog/2017/03/elasticsearch-java-client.html</id>
     <published>2017-03-10T05:38:32.000Z</published>
     <updated>2017-03-11T14:17:23.308Z</updated>
     
@@ -34,21 +34,21 @@
     
     </summary>
     
-      <category term="Java" scheme="http://www.ezlippi.com/categories/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://www.ezlippi.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/tags/Java/"/>
     
-      <category term="DataBase" scheme="http://www.ezlippi.com/tags/DataBase/"/>
+      <category term="DataBase" scheme="https://www.ezlippi.com/tags/DataBase/"/>
     
-      <category term="ElasticSearch" scheme="http://www.ezlippi.com/tags/ElasticSearch/"/>
+      <category term="ElasticSearch" scheme="https://www.ezlippi.com/tags/ElasticSearch/"/>
     
   </entry>
   
   <entry>
     <title>MyBatis教程</title>
-    <link href="http://www.ezlippi.com//blog/2017/02/mybatis-intorduction.html"/>
-    <id>http://www.ezlippi.com//blog/2017/02/mybatis-intorduction.html</id>
+    <link href="https://www.ezlippi.com//blog/2017/02/mybatis-intorduction.html"/>
+    <id>https://www.ezlippi.com//blog/2017/02/mybatis-intorduction.html</id>
     <published>2017-02-12T05:38:32.000Z</published>
     <updated>2017-03-11T15:43:23.549Z</updated>
     
@@ -58,23 +58,23 @@
     
     </summary>
     
-      <category term="Java" scheme="http://www.ezlippi.com/categories/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/categories/Java/"/>
     
     
-      <category term="Java" scheme="http://www.ezlippi.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/tags/Java/"/>
     
-      <category term="MyBatis" scheme="http://www.ezlippi.com/tags/MyBatis/"/>
+      <category term="MyBatis" scheme="https://www.ezlippi.com/tags/MyBatis/"/>
     
-      <category term="ORM" scheme="http://www.ezlippi.com/tags/ORM/"/>
+      <category term="ORM" scheme="https://www.ezlippi.com/tags/ORM/"/>
     
-      <category term="DataBase" scheme="http://www.ezlippi.com/tags/DataBase/"/>
+      <category term="DataBase" scheme="https://www.ezlippi.com/tags/DataBase/"/>
     
   </entry>
   
   <entry>
     <title>SED教程</title>
-    <link href="http://www.ezlippi.com//blog/2017/02/sed-introduction.html"/>
-    <id>http://www.ezlippi.com//blog/2017/02/sed-introduction.html</id>
+    <link href="https://www.ezlippi.com//blog/2017/02/sed-introduction.html"/>
+    <id>https://www.ezlippi.com//blog/2017/02/sed-introduction.html</id>
     <published>2017-02-08T05:38:32.000Z</published>
     <updated>2017-03-11T15:48:16.878Z</updated>
     
@@ -84,17 +84,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.ezlippi.com/categories/Linux/"/>
+      <category term="Linux" scheme="https://www.ezlippi.com/categories/Linux/"/>
     
     
-      <category term="SED" scheme="http://www.ezlippi.com/tags/SED/"/>
+      <category term="SED" scheme="https://www.ezlippi.com/tags/SED/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客添加站内搜索</title>
-    <link href="http://www.ezlippi.com//blog/2017/02/hexo-search.html"/>
-    <id>http://www.ezlippi.com//blog/2017/02/hexo-search.html</id>
+    <link href="https://www.ezlippi.com//blog/2017/02/hexo-search.html"/>
+    <id>https://www.ezlippi.com//blog/2017/02/hexo-search.html</id>
     <published>2017-02-02T11:38:32.000Z</published>
     <updated>2017-02-05T13:54:08.011Z</updated>
     
@@ -104,21 +104,21 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://www.ezlippi.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://www.ezlippi.com/categories/hexo/"/>
     
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/tags/jekyll/"/>
     
-      <category term="blog" scheme="http://www.ezlippi.com/tags/blog/"/>
+      <category term="blog" scheme="https://www.ezlippi.com/tags/blog/"/>
     
-      <category term="hexo" scheme="http://www.ezlippi.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://www.ezlippi.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>优秀的程序员都在用谷歌</title>
-    <link href="http://www.ezlippi.com//blog/2017/02/ss-proxy-guide.html"/>
-    <id>http://www.ezlippi.com//blog/2017/02/ss-proxy-guide.html</id>
+    <link href="https://www.ezlippi.com//blog/2017/02/ss-proxy-guide.html"/>
+    <id>https://www.ezlippi.com//blog/2017/02/ss-proxy-guide.html</id>
     <published>2017-02-02T05:38:32.000Z</published>
     <updated>2017-02-05T14:34:53.525Z</updated>
     
@@ -128,19 +128,19 @@
     
     </summary>
     
-      <category term="google" scheme="http://www.ezlippi.com/categories/google/"/>
+      <category term="google" scheme="https://www.ezlippi.com/categories/google/"/>
     
     
-      <category term="google" scheme="http://www.ezlippi.com/tags/google/"/>
+      <category term="google" scheme="https://www.ezlippi.com/tags/google/"/>
     
-      <category term="hosts" scheme="http://www.ezlippi.com/tags/hosts/"/>
+      <category term="hosts" scheme="https://www.ezlippi.com/tags/hosts/"/>
     
   </entry>
   
   <entry>
     <title>Maven生命周期和插件</title>
-    <link href="http://www.ezlippi.com//blog/2016/08/maven-lifecycle-introduction.html"/>
-    <id>http://www.ezlippi.com//blog/2016/08/maven-lifecycle-introduction.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/08/maven-lifecycle-introduction.html"/>
+    <id>https://www.ezlippi.com//blog/2016/08/maven-lifecycle-introduction.html</id>
     <published>2016-08-02T05:38:32.000Z</published>
     <updated>2016-08-07T14:06:18.092Z</updated>
     
@@ -150,21 +150,21 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="maven" scheme="http://www.ezlippi.com/tags/maven/"/>
+      <category term="maven" scheme="https://www.ezlippi.com/tags/maven/"/>
     
-      <category term="lifecycle" scheme="http://www.ezlippi.com/tags/lifecycle/"/>
+      <category term="lifecycle" scheme="https://www.ezlippi.com/tags/lifecycle/"/>
     
-      <category term="plugins" scheme="http://www.ezlippi.com/tags/plugins/"/>
+      <category term="plugins" scheme="https://www.ezlippi.com/tags/plugins/"/>
     
   </entry>
   
   <entry>
     <title>利用Jacoco计算单元测试覆盖率</title>
-    <link href="http://www.ezlippi.com//blog/2016/06/Jacoco-coverage.html"/>
-    <id>http://www.ezlippi.com//blog/2016/06/Jacoco-coverage.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/06/Jacoco-coverage.html"/>
+    <id>https://www.ezlippi.com//blog/2016/06/Jacoco-coverage.html</id>
     <published>2016-06-26T05:10:05.000Z</published>
     <updated>2016-06-28T15:10:09.305Z</updated>
     
@@ -174,19 +174,19 @@
     
     </summary>
     
-      <category term="Java" scheme="http://www.ezlippi.com/categories/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/categories/Java/"/>
     
     
-      <category term="单元测试" scheme="http://www.ezlippi.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+      <category term="单元测试" scheme="https://www.ezlippi.com/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
     
-      <category term="覆盖率" scheme="http://www.ezlippi.com/tags/%E8%A6%86%E7%9B%96%E7%8E%87/"/>
+      <category term="覆盖率" scheme="https://www.ezlippi.com/tags/%E8%A6%86%E7%9B%96%E7%8E%87/"/>
     
   </entry>
   
   <entry>
     <title>Java NIO 基本概念</title>
-    <link href="http://www.ezlippi.com//blog/2016/06/java-nio-concept.html"/>
-    <id>http://www.ezlippi.com//blog/2016/06/java-nio-concept.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/06/java-nio-concept.html"/>
+    <id>https://www.ezlippi.com//blog/2016/06/java-nio-concept.html</id>
     <published>2016-06-04T11:16:21.000Z</published>
     <updated>2016-06-04T13:23:26.234Z</updated>
     
@@ -196,19 +196,19 @@
     
     </summary>
     
-      <category term="Java" scheme="http://www.ezlippi.com/categories/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/categories/Java/"/>
     
     
-      <category term="NIO" scheme="http://www.ezlippi.com/tags/NIO/"/>
+      <category term="NIO" scheme="https://www.ezlippi.com/tags/NIO/"/>
     
-      <category term="Java" scheme="http://www.ezlippi.com/tags/Java/"/>
+      <category term="Java" scheme="https://www.ezlippi.com/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>Android APK签名详解</title>
-    <link href="http://www.ezlippi.com//blog/2016/03/android-apk-signing.html"/>
-    <id>http://www.ezlippi.com//blog/2016/03/android-apk-signing.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/03/android-apk-signing.html"/>
+    <id>https://www.ezlippi.com//blog/2016/03/android-apk-signing.html</id>
     <published>2016-03-23T11:16:21.000Z</published>
     <updated>2016-03-25T02:27:04.000Z</updated>
     
@@ -226,21 +226,21 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.ezlippi.com/categories/Android/"/>
+      <category term="Android" scheme="https://www.ezlippi.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://www.ezlippi.com/tags/Android/"/>
+      <category term="Android" scheme="https://www.ezlippi.com/tags/Android/"/>
     
-      <category term="APK" scheme="http://www.ezlippi.com/tags/APK/"/>
+      <category term="APK" scheme="https://www.ezlippi.com/tags/APK/"/>
     
-      <category term="签名" scheme="http://www.ezlippi.com/tags/%E7%AD%BE%E5%90%8D/"/>
+      <category term="签名" scheme="https://www.ezlippi.com/tags/%E7%AD%BE%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>Android反编译(逆向)教程</title>
-    <link href="http://www.ezlippi.com//blog/2016/03/android-apk-classy.html"/>
-    <id>http://www.ezlippi.com//blog/2016/03/android-apk-classy.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/03/android-apk-classy.html"/>
+    <id>https://www.ezlippi.com//blog/2016/03/android-apk-classy.html</id>
     <published>2016-03-20T10:16:21.000Z</published>
     <updated>2016-03-20T11:44:57.000Z</updated>
     
@@ -250,21 +250,21 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.ezlippi.com/categories/Android/"/>
+      <category term="Android" scheme="https://www.ezlippi.com/categories/Android/"/>
     
     
-      <category term="Android" scheme="http://www.ezlippi.com/tags/Android/"/>
+      <category term="Android" scheme="https://www.ezlippi.com/tags/Android/"/>
     
-      <category term="逆向" scheme="http://www.ezlippi.com/tags/%E9%80%86%E5%90%91/"/>
+      <category term="逆向" scheme="https://www.ezlippi.com/tags/%E9%80%86%E5%90%91/"/>
     
-      <category term="反编译" scheme="http://www.ezlippi.com/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/"/>
+      <category term="反编译" scheme="https://www.ezlippi.com/tags/%E5%8F%8D%E7%BC%96%E8%AF%91/"/>
     
   </entry>
   
   <entry>
     <title>Jekyll迁移到Hexo搭建个人博客</title>
-    <link href="http://www.ezlippi.com//blog/2016/02/jekyll-to-hexo.html"/>
-    <id>http://www.ezlippi.com//blog/2016/02/jekyll-to-hexo.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/02/jekyll-to-hexo.html"/>
+    <id>https://www.ezlippi.com//blog/2016/02/jekyll-to-hexo.html</id>
     <published>2016-02-26T16:00:00.000Z</published>
     <updated>2017-03-11T15:45:07.440Z</updated>
     
@@ -278,19 +278,19 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://www.ezlippi.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="https://www.ezlippi.com/categories/Hexo/"/>
     
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/tags/jekyll/"/>
     
-      <category term="hexo" scheme="http://www.ezlippi.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://www.ezlippi.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>Git操作手册|命令速查表</title>
-    <link href="http://www.ezlippi.com//blog/2016/02/git-guide.html"/>
-    <id>http://www.ezlippi.com//blog/2016/02/git-guide.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/02/git-guide.html"/>
+    <id>https://www.ezlippi.com//blog/2016/02/git-guide.html</id>
     <published>2016-02-19T16:00:00.000Z</published>
     <updated>2016-02-29T12:30:22.000Z</updated>
     
@@ -305,19 +305,19 @@
     
     </summary>
     
-      <category term="Git" scheme="http://www.ezlippi.com/categories/Git/"/>
+      <category term="Git" scheme="https://www.ezlippi.com/categories/Git/"/>
     
     
-      <category term="Git" scheme="http://www.ezlippi.com/tags/Git/"/>
+      <category term="Git" scheme="https://www.ezlippi.com/tags/Git/"/>
     
-      <category term="VCS" scheme="http://www.ezlippi.com/tags/VCS/"/>
+      <category term="VCS" scheme="https://www.ezlippi.com/tags/VCS/"/>
     
   </entry>
   
   <entry>
     <title>解决百度爬虫无法抓取github pages</title>
-    <link href="http://www.ezlippi.com//blog/2016/02/baidu-spider-forbidden.html"/>
-    <id>http://www.ezlippi.com//blog/2016/02/baidu-spider-forbidden.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/02/baidu-spider-forbidden.html"/>
+    <id>https://www.ezlippi.com//blog/2016/02/baidu-spider-forbidden.html</id>
     <published>2016-02-17T16:00:00.000Z</published>
     <updated>2016-02-29T12:30:58.000Z</updated>
     
@@ -328,17 +328,17 @@
     
     </summary>
     
-      <category term="Unix/Linux" scheme="http://www.ezlippi.com/categories/Unix-Linux/"/>
+      <category term="Unix/Linux" scheme="https://www.ezlippi.com/categories/Unix-Linux/"/>
     
     
-      <category term="github" scheme="http://www.ezlippi.com/tags/github/"/>
+      <category term="github" scheme="https://www.ezlippi.com/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu下Apache服务器的配置</title>
-    <link href="http://www.ezlippi.com//blog/2016/01/apache-configuration-in-ubuntu.html"/>
-    <id>http://www.ezlippi.com//blog/2016/01/apache-configuration-in-ubuntu.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/01/apache-configuration-in-ubuntu.html"/>
+    <id>https://www.ezlippi.com//blog/2016/01/apache-configuration-in-ubuntu.html</id>
     <published>2016-01-19T16:00:00.000Z</published>
     <updated>2016-02-29T13:53:50.000Z</updated>
     
@@ -348,19 +348,19 @@
     
     </summary>
     
-      <category term="Unix/Linux" scheme="http://www.ezlippi.com/categories/Unix-Linux/"/>
+      <category term="Unix/Linux" scheme="https://www.ezlippi.com/categories/Unix-Linux/"/>
     
     
-      <category term="web" scheme="http://www.ezlippi.com/tags/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/tags/web/"/>
     
-      <category term="linux" scheme="http://www.ezlippi.com/tags/linux/"/>
+      <category term="linux" scheme="https://www.ezlippi.com/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>终端复用软件之tmux简介</title>
-    <link href="http://www.ezlippi.com//blog/2016/01/tmux-guide.html"/>
-    <id>http://www.ezlippi.com//blog/2016/01/tmux-guide.html</id>
+    <link href="https://www.ezlippi.com//blog/2016/01/tmux-guide.html"/>
+    <id>https://www.ezlippi.com//blog/2016/01/tmux-guide.html</id>
     <published>2016-01-18T17:05:13.000Z</published>
     <updated>2016-03-01T06:00:44.000Z</updated>
     
@@ -370,19 +370,19 @@
     
     </summary>
     
-      <category term="Unix/Linux" scheme="http://www.ezlippi.com/categories/Unix-Linux/"/>
+      <category term="Unix/Linux" scheme="https://www.ezlippi.com/categories/Unix-Linux/"/>
     
     
-      <category term="shell" scheme="http://www.ezlippi.com/tags/shell/"/>
+      <category term="shell" scheme="https://www.ezlippi.com/tags/shell/"/>
     
-      <category term="linux" scheme="http://www.ezlippi.com/tags/linux/"/>
+      <category term="linux" scheme="https://www.ezlippi.com/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>提高效率的Android Studio插件</title>
-    <link href="http://www.ezlippi.com//blog/2015/09/android-studio-plugins.html"/>
-    <id>http://www.ezlippi.com//blog/2015/09/android-studio-plugins.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/09/android-studio-plugins.html"/>
+    <id>https://www.ezlippi.com//blog/2015/09/android-studio-plugins.html</id>
     <published>2015-09-08T16:00:00.000Z</published>
     <updated>2016-02-29T13:14:18.000Z</updated>
     
@@ -392,19 +392,19 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.ezlippi.com/categories/Android/"/>
+      <category term="Android" scheme="https://www.ezlippi.com/categories/Android/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
-      <category term="studio" scheme="http://www.ezlippi.com/tags/studio/"/>
+      <category term="studio" scheme="https://www.ezlippi.com/tags/studio/"/>
     
   </entry>
   
   <entry>
     <title>Volley源码分析</title>
-    <link href="http://www.ezlippi.com//blog/2015/08/volley-source-code.html"/>
-    <id>http://www.ezlippi.com//blog/2015/08/volley-source-code.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/08/volley-source-code.html"/>
+    <id>https://www.ezlippi.com//blog/2015/08/volley-source-code.html</id>
     <published>2015-08-26T16:00:00.000Z</published>
     <updated>2016-02-29T13:54:57.000Z</updated>
     
@@ -414,19 +414,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
-      <category term="android" scheme="http://www.ezlippi.com/categories/java/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/categories/java/android/"/>
     
     
-      <category term="network,　异步, Volley, android" scheme="http://www.ezlippi.com/tags/network-%E5%BC%82%E6%AD%A5-Volley-android/"/>
+      <category term="network,　异步, Volley, android" scheme="https://www.ezlippi.com/tags/network-%E5%BC%82%E6%AD%A5-Volley-android/"/>
     
   </entry>
   
   <entry>
     <title>Zsh-Linux下最好的Shell简介</title>
-    <link href="http://www.ezlippi.com//blog/2015/08/linux-zsh.html"/>
-    <id>http://www.ezlippi.com//blog/2015/08/linux-zsh.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/08/linux-zsh.html"/>
+    <id>https://www.ezlippi.com//blog/2015/08/linux-zsh.html</id>
     <published>2015-08-22T16:00:00.000Z</published>
     <updated>2016-02-29T13:12:52.000Z</updated>
     
@@ -436,19 +436,19 @@
     
     </summary>
     
-      <category term="Unix/Linux" scheme="http://www.ezlippi.com/categories/Unix-Linux/"/>
+      <category term="Unix/Linux" scheme="https://www.ezlippi.com/categories/Unix-Linux/"/>
     
     
-      <category term="shell" scheme="http://www.ezlippi.com/tags/shell/"/>
+      <category term="shell" scheme="https://www.ezlippi.com/tags/shell/"/>
     
-      <category term="linux" scheme="http://www.ezlippi.com/tags/linux/"/>
+      <category term="linux" scheme="https://www.ezlippi.com/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Latex中英文环境设置</title>
-    <link href="http://www.ezlippi.com//blog/2015/08/latex-fonts-settings.html"/>
-    <id>http://www.ezlippi.com//blog/2015/08/latex-fonts-settings.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/08/latex-fonts-settings.html"/>
+    <id>https://www.ezlippi.com//blog/2015/08/latex-fonts-settings.html</id>
     <published>2015-08-21T16:00:00.000Z</published>
     <updated>2016-02-29T13:12:29.000Z</updated>
     
@@ -458,17 +458,17 @@
     
     </summary>
     
-      <category term="Latex" scheme="http://www.ezlippi.com/categories/Latex/"/>
+      <category term="Latex" scheme="https://www.ezlippi.com/categories/Latex/"/>
     
     
-      <category term="Latex" scheme="http://www.ezlippi.com/tags/Latex/"/>
+      <category term="Latex" scheme="https://www.ezlippi.com/tags/Latex/"/>
     
   </entry>
   
   <entry>
     <title>Dagger依赖注入浅析</title>
-    <link href="http://www.ezlippi.com//blog/2015/08/dagger-dependency-injection.html"/>
-    <id>http://www.ezlippi.com//blog/2015/08/dagger-dependency-injection.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/08/dagger-dependency-injection.html"/>
+    <id>https://www.ezlippi.com//blog/2015/08/dagger-dependency-injection.html</id>
     <published>2015-08-12T16:00:00.000Z</published>
     <updated>2016-02-29T13:11:57.000Z</updated>
     
@@ -478,17 +478,17 @@
     
     </summary>
     
-      <category term="gradle" scheme="http://www.ezlippi.com/categories/gradle/"/>
+      <category term="gradle" scheme="https://www.ezlippi.com/categories/gradle/"/>
     
     
-      <category term="java, gradle" scheme="http://www.ezlippi.com/tags/java-gradle/"/>
+      <category term="java, gradle" scheme="https://www.ezlippi.com/tags/java-gradle/"/>
     
   </entry>
   
   <entry>
     <title>彻底理解Gradle的任务</title>
-    <link href="http://www.ezlippi.com//blog/2015/07/gradle-tasks-guide.html"/>
-    <id>http://www.ezlippi.com//blog/2015/07/gradle-tasks-guide.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/07/gradle-tasks-guide.html"/>
+    <id>https://www.ezlippi.com//blog/2015/07/gradle-tasks-guide.html</id>
     <published>2015-07-26T16:00:00.000Z</published>
     <updated>2016-02-29T13:10:22.000Z</updated>
     
@@ -498,17 +498,17 @@
     
     </summary>
     
-      <category term="gradle" scheme="http://www.ezlippi.com/categories/gradle/"/>
+      <category term="gradle" scheme="https://www.ezlippi.com/categories/gradle/"/>
     
     
-      <category term="java, gradle" scheme="http://www.ezlippi.com/tags/java-gradle/"/>
+      <category term="java, gradle" scheme="https://www.ezlippi.com/tags/java-gradle/"/>
     
   </entry>
   
   <entry>
     <title>Hibernate缓存配置笔记</title>
-    <link href="http://www.ezlippi.com//blog/2015/07/hibernate-cache-guide.html"/>
-    <id>http://www.ezlippi.com//blog/2015/07/hibernate-cache-guide.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/07/hibernate-cache-guide.html"/>
+    <id>https://www.ezlippi.com//blog/2015/07/hibernate-cache-guide.html</id>
     <published>2015-07-23T16:00:00.000Z</published>
     <updated>2016-02-29T13:57:50.000Z</updated>
     
@@ -518,21 +518,21 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="cache" scheme="http://www.ezlippi.com/tags/cache/"/>
+      <category term="cache" scheme="https://www.ezlippi.com/tags/cache/"/>
     
-      <category term="hibernate" scheme="http://www.ezlippi.com/tags/hibernate/"/>
+      <category term="hibernate" scheme="https://www.ezlippi.com/tags/hibernate/"/>
     
   </entry>
   
   <entry>
     <title>Java Lambda简明教程</title>
-    <link href="http://www.ezlippi.com//blog/2015/06/java-lambda-expression.html"/>
-    <id>http://www.ezlippi.com//blog/2015/06/java-lambda-expression.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/06/java-lambda-expression.html"/>
+    <id>https://www.ezlippi.com//blog/2015/06/java-lambda-expression.html</id>
     <published>2015-06-02T16:00:00.000Z</published>
     <updated>2016-02-29T13:03:46.000Z</updated>
     
@@ -542,19 +542,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
-      <category term="lambda" scheme="http://www.ezlippi.com/categories/java/lambda/"/>
+      <category term="lambda" scheme="https://www.ezlippi.com/categories/java/lambda/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>安卓开发者必备的42个链接</title>
-    <link href="http://www.ezlippi.com//blog/2015/05/android-links.html"/>
-    <id>http://www.ezlippi.com//blog/2015/05/android-links.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/05/android-links.html"/>
+    <id>https://www.ezlippi.com//blog/2015/05/android-links.html</id>
     <published>2015-05-18T16:00:00.000Z</published>
     <updated>2016-03-18T10:09:39.000Z</updated>
     
@@ -564,17 +564,17 @@
     
     </summary>
     
-      <category term="android" scheme="http://www.ezlippi.com/categories/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/categories/android/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>Android自定义视图教程</title>
-    <link href="http://www.ezlippi.com//blog/2015/05/define-custom-view.html"/>
-    <id>http://www.ezlippi.com//blog/2015/05/define-custom-view.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/05/define-custom-view.html"/>
+    <id>https://www.ezlippi.com//blog/2015/05/define-custom-view.html</id>
     <published>2015-05-16T16:00:00.000Z</published>
     <updated>2016-03-18T10:11:51.000Z</updated>
     
@@ -584,17 +584,17 @@
     
     </summary>
     
-      <category term="android" scheme="http://www.ezlippi.com/categories/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/categories/android/"/>
     
     
-      <category term="android, view" scheme="http://www.ezlippi.com/tags/android-view/"/>
+      <category term="android, view" scheme="https://www.ezlippi.com/tags/android-view/"/>
     
   </entry>
   
   <entry>
     <title>Gradle系列教程之依赖管理</title>
-    <link href="http://www.ezlippi.com//blog/2015/05/gradle-dependency-management.html"/>
-    <id>http://www.ezlippi.com//blog/2015/05/gradle-dependency-management.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/05/gradle-dependency-management.html"/>
+    <id>https://www.ezlippi.com//blog/2015/05/gradle-dependency-management.html</id>
     <published>2015-05-04T16:00:00.000Z</published>
     <updated>2016-03-18T10:27:11.000Z</updated>
     
@@ -605,19 +605,19 @@
     
     </summary>
     
-      <category term="Gradle" scheme="http://www.ezlippi.com/categories/Gradle/"/>
+      <category term="Gradle" scheme="https://www.ezlippi.com/categories/Gradle/"/>
     
     
-      <category term="Gradle" scheme="http://www.ezlippi.com/tags/Gradle/"/>
+      <category term="Gradle" scheme="https://www.ezlippi.com/tags/Gradle/"/>
     
-      <category term="项目构建" scheme="http://www.ezlippi.com/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA/"/>
+      <category term="项目构建" scheme="https://www.ezlippi.com/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>Gradle系列教程之任务管理</title>
-    <link href="http://www.ezlippi.com//blog/2015/04/gradle-task-management.html"/>
-    <id>http://www.ezlippi.com//blog/2015/04/gradle-task-management.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/04/gradle-task-management.html"/>
+    <id>https://www.ezlippi.com//blog/2015/04/gradle-task-management.html</id>
     <published>2015-04-29T16:00:00.000Z</published>
     <updated>2016-03-18T10:23:01.000Z</updated>
     
@@ -627,19 +627,19 @@
     
     </summary>
     
-      <category term="Gradle" scheme="http://www.ezlippi.com/categories/Gradle/"/>
+      <category term="Gradle" scheme="https://www.ezlippi.com/categories/Gradle/"/>
     
     
-      <category term="Gradle" scheme="http://www.ezlippi.com/tags/Gradle/"/>
+      <category term="Gradle" scheme="https://www.ezlippi.com/tags/Gradle/"/>
     
-      <category term="项目构建" scheme="http://www.ezlippi.com/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA/"/>
+      <category term="项目构建" scheme="https://www.ezlippi.com/tags/%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>Java虚拟机简介</title>
-    <link href="http://www.ezlippi.com//blog/2015/04/java-virtual-mechine.html"/>
-    <id>http://www.ezlippi.com//blog/2015/04/java-virtual-mechine.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/04/java-virtual-mechine.html"/>
+    <id>https://www.ezlippi.com//blog/2015/04/java-virtual-mechine.html</id>
     <published>2015-04-17T16:00:00.000Z</published>
     <updated>2016-02-29T12:55:09.000Z</updated>
     
@@ -649,19 +649,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="javas" scheme="http://www.ezlippi.com/tags/javas/"/>
+      <category term="javas" scheme="https://www.ezlippi.com/tags/javas/"/>
     
-      <category term="虚拟机" scheme="http://www.ezlippi.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+      <category term="虚拟机" scheme="https://www.ezlippi.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
     <title>android实用小技巧</title>
-    <link href="http://www.ezlippi.com//blog/2015/04/android-tips.html"/>
-    <id>http://www.ezlippi.com//blog/2015/04/android-tips.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/04/android-tips.html"/>
+    <id>https://www.ezlippi.com//blog/2015/04/android-tips.html</id>
     <published>2015-04-16T01:52:18.000Z</published>
     <updated>2016-03-18T11:03:23.000Z</updated>
     
@@ -672,14 +672,14 @@
     </summary>
     
     
-      <category term="android, tips" scheme="http://www.ezlippi.com/tags/android-tips/"/>
+      <category term="android, tips" scheme="https://www.ezlippi.com/tags/android-tips/"/>
     
   </entry>
   
   <entry>
     <title>网络传输基础</title>
-    <link href="http://www.ezlippi.com//blog/2015/04/web-transmission-basis.html"/>
-    <id>http://www.ezlippi.com//blog/2015/04/web-transmission-basis.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/04/web-transmission-basis.html"/>
+    <id>https://www.ezlippi.com//blog/2015/04/web-transmission-basis.html</id>
     <published>2015-04-15T16:00:00.000Z</published>
     <updated>2016-02-29T12:54:16.000Z</updated>
     
@@ -689,19 +689,19 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.ezlippi.com/tags/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/tags/web/"/>
     
-      <category term="网络传输" scheme="http://www.ezlippi.com/tags/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93/"/>
+      <category term="网络传输" scheme="https://www.ezlippi.com/tags/%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93/"/>
     
   </entry>
   
   <entry>
     <title>优化java代码建议(1)</title>
-    <link href="http://www.ezlippi.com//blog/2015/04/java-code-opt-one.html"/>
-    <id>http://www.ezlippi.com//blog/2015/04/java-code-opt-one.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/04/java-code-opt-one.html"/>
+    <id>https://www.ezlippi.com//blog/2015/04/java-code-opt-one.html</id>
     <published>2015-04-12T13:05:13.000Z</published>
     <updated>2016-02-29T12:53:26.000Z</updated>
     
@@ -735,17 +735,17 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>一些强大的Vim插件</title>
-    <link href="http://www.ezlippi.com//blog/2015/03/vim-plugins.html"/>
-    <id>http://www.ezlippi.com//blog/2015/03/vim-plugins.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/03/vim-plugins.html"/>
+    <id>https://www.ezlippi.com//blog/2015/03/vim-plugins.html</id>
     <published>2015-03-20T01:20:26.000Z</published>
     <updated>2016-02-29T12:52:50.000Z</updated>
     
@@ -756,17 +756,17 @@
     
     </summary>
     
-      <category term="other" scheme="http://www.ezlippi.com/categories/other/"/>
+      <category term="other" scheme="https://www.ezlippi.com/categories/other/"/>
     
     
-      <category term="Vim" scheme="http://www.ezlippi.com/tags/Vim/"/>
+      <category term="Vim" scheme="https://www.ezlippi.com/tags/Vim/"/>
     
   </entry>
   
   <entry>
     <title>Android Studio多渠道打包和代码混淆教程</title>
-    <link href="http://www.ezlippi.com//blog/2015/03/android-studio-prefrence.html"/>
-    <id>http://www.ezlippi.com//blog/2015/03/android-studio-prefrence.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/03/android-studio-prefrence.html"/>
+    <id>https://www.ezlippi.com//blog/2015/03/android-studio-prefrence.html</id>
     <published>2015-03-17T16:00:00.000Z</published>
     <updated>2016-03-21T12:03:57.000Z</updated>
     
@@ -776,17 +776,17 @@
     
     </summary>
     
-      <category term="android" scheme="http://www.ezlippi.com/categories/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/categories/android/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>在Ubuntu下安装和编译LaTex</title>
-    <link href="http://www.ezlippi.com//blog/2015/03/install-texlive-in-ubuntu.html"/>
-    <id>http://www.ezlippi.com//blog/2015/03/install-texlive-in-ubuntu.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/03/install-texlive-in-ubuntu.html"/>
+    <id>https://www.ezlippi.com//blog/2015/03/install-texlive-in-ubuntu.html</id>
     <published>2015-03-14T16:00:00.000Z</published>
     <updated>2016-03-18T09:21:28.000Z</updated>
     
@@ -796,21 +796,21 @@
     
     </summary>
     
-      <category term="other" scheme="http://www.ezlippi.com/categories/other/"/>
+      <category term="other" scheme="https://www.ezlippi.com/categories/other/"/>
     
-      <category term="programming" scheme="http://www.ezlippi.com/categories/other/programming/"/>
+      <category term="programming" scheme="https://www.ezlippi.com/categories/other/programming/"/>
     
     
-      <category term="编程" scheme="http://www.ezlippi.com/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.ezlippi.com/tags/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="学习" scheme="http://www.ezlippi.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="https://www.ezlippi.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>利用github-pages建立个人博客</title>
-    <link href="http://www.ezlippi.com//blog/2015/03/github-pages-blog.html"/>
-    <id>http://www.ezlippi.com//blog/2015/03/github-pages-blog.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/03/github-pages-blog.html"/>
+    <id>https://www.ezlippi.com//blog/2015/03/github-pages-blog.html</id>
     <published>2015-02-28T16:00:00.000Z</published>
     <updated>2016-03-21T11:53:41.000Z</updated>
     
@@ -820,19 +820,19 @@
     
     </summary>
     
-      <category term="other" scheme="http://www.ezlippi.com/categories/other/"/>
+      <category term="other" scheme="https://www.ezlippi.com/categories/other/"/>
     
-      <category term="programming" scheme="http://www.ezlippi.com/categories/other/programming/"/>
+      <category term="programming" scheme="https://www.ezlippi.com/categories/other/programming/"/>
     
     
-      <category term="blog" scheme="http://www.ezlippi.com/tags/blog/"/>
+      <category term="blog" scheme="https://www.ezlippi.com/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>谈谈缓存和基本的缓存算法</title>
-    <link href="http://www.ezlippi.com//blog/2015/02/cache.html"/>
-    <id>http://www.ezlippi.com//blog/2015/02/cache.html</id>
+    <link href="https://www.ezlippi.com//blog/2015/02/cache.html"/>
+    <id>https://www.ezlippi.com//blog/2015/02/cache.html</id>
     <published>2015-02-03T16:00:00.000Z</published>
     <updated>2016-03-18T10:06:41.000Z</updated>
     
@@ -842,19 +842,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="cache" scheme="http://www.ezlippi.com/tags/cache/"/>
+      <category term="cache" scheme="https://www.ezlippi.com/tags/cache/"/>
     
   </entry>
   
   <entry>
     <title>C代码优化小贴士</title>
-    <link href="http://www.ezlippi.com//blog/2014/12/c-code-opt.html"/>
-    <id>http://www.ezlippi.com//blog/2014/12/c-code-opt.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/12/c-code-opt.html"/>
+    <id>https://www.ezlippi.com//blog/2014/12/c-code-opt.html</id>
     <published>2014-12-26T16:00:00.000Z</published>
     <updated>2016-03-18T10:02:05.000Z</updated>
     
@@ -864,17 +864,17 @@
     
     </summary>
     
-      <category term="c" scheme="http://www.ezlippi.com/categories/c/"/>
+      <category term="c" scheme="https://www.ezlippi.com/categories/c/"/>
     
     
-      <category term="编程语言" scheme="http://www.ezlippi.com/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+      <category term="编程语言" scheme="https://www.ezlippi.com/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>skip list跳跃表实现</title>
-    <link href="http://www.ezlippi.com//blog/2014/12/skip-list.html"/>
-    <id>http://www.ezlippi.com//blog/2014/12/skip-list.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/12/skip-list.html"/>
+    <id>https://www.ezlippi.com//blog/2014/12/skip-list.html</id>
     <published>2014-12-17T16:00:00.000Z</published>
     <updated>2016-02-29T12:38:16.000Z</updated>
     
@@ -884,17 +884,17 @@
     
     </summary>
     
-      <category term="algorithm" scheme="http://www.ezlippi.com/categories/algorithm/"/>
+      <category term="algorithm" scheme="https://www.ezlippi.com/categories/algorithm/"/>
     
     
-      <category term="algorithm" scheme="http://www.ezlippi.com/tags/algorithm/"/>
+      <category term="algorithm" scheme="https://www.ezlippi.com/tags/algorithm/"/>
     
   </entry>
   
   <entry>
     <title>值得推荐的C/C++框架和库</title>
-    <link href="http://www.ezlippi.com//blog/2014/12/c-open-project.html"/>
-    <id>http://www.ezlippi.com//blog/2014/12/c-open-project.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/12/c-open-project.html"/>
+    <id>https://www.ezlippi.com//blog/2014/12/c-open-project.html</id>
     <published>2014-12-12T16:00:00.000Z</published>
     <updated>2016-03-03T02:22:37.000Z</updated>
     
@@ -904,25 +904,25 @@
     
     </summary>
     
-      <category term="c/c++" scheme="http://www.ezlippi.com/categories/c-c/"/>
+      <category term="c/c++" scheme="https://www.ezlippi.com/categories/c-c/"/>
     
     
-      <category term="开源" scheme="http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="https://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
     
-      <category term="C" scheme="http://www.ezlippi.com/tags/C/"/>
+      <category term="C" scheme="https://www.ezlippi.com/tags/C/"/>
     
-      <category term="C++" scheme="http://www.ezlippi.com/tags/C/"/>
+      <category term="C++" scheme="https://www.ezlippi.com/tags/C/"/>
     
-      <category term="OpenSource" scheme="http://www.ezlippi.com/tags/OpenSource/"/>
+      <category term="OpenSource" scheme="https://www.ezlippi.com/tags/OpenSource/"/>
     
-      <category term="框架" scheme="http://www.ezlippi.com/tags/%E6%A1%86%E6%9E%B6/"/>
+      <category term="框架" scheme="https://www.ezlippi.com/tags/%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
   <entry>
     <title>谈谈如何提高web服务器并发性能</title>
-    <link href="http://www.ezlippi.com//blog/2014/12/improve-webServer-performance.html"/>
-    <id>http://www.ezlippi.com//blog/2014/12/improve-webServer-performance.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/12/improve-webServer-performance.html"/>
+    <id>https://www.ezlippi.com//blog/2014/12/improve-webServer-performance.html</id>
     <published>2014-12-04T16:00:00.000Z</published>
     <updated>2016-02-29T12:37:40.000Z</updated>
     
@@ -932,19 +932,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="并发， 服务器" scheme="http://www.ezlippi.com/tags/%E5%B9%B6%E5%8F%91%EF%BC%8C-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="并发， 服务器" scheme="https://www.ezlippi.com/tags/%E5%B9%B6%E5%8F%91%EF%BC%8C-%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>计算机算法--图算法介绍</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/graph.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/graph.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/graph.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/graph.html</id>
     <published>2014-11-28T16:00:00.000Z</published>
     <updated>2016-02-29T12:37:34.000Z</updated>
     
@@ -955,17 +955,17 @@
     
     </summary>
     
-      <category term="algorithm" scheme="http://www.ezlippi.com/categories/algorithm/"/>
+      <category term="algorithm" scheme="https://www.ezlippi.com/categories/algorithm/"/>
     
     
-      <category term="algorithm" scheme="http://www.ezlippi.com/tags/algorithm/"/>
+      <category term="algorithm" scheme="https://www.ezlippi.com/tags/algorithm/"/>
     
   </entry>
   
   <entry>
     <title>也谈如何构建高性能服务端程序</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/web-server.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/web-server.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/web-server.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/web-server.html</id>
     <published>2014-11-18T16:00:00.000Z</published>
     <updated>2016-02-29T12:36:33.000Z</updated>
     
@@ -975,19 +975,19 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="web" scheme="http://www.ezlippi.com/tags/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/tags/web/"/>
     
-      <category term="服务器" scheme="http://www.ezlippi.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="https://www.ezlippi.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>leveldb原理剖析</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/leveldb.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/leveldb.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/leveldb.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/leveldb.html</id>
     <published>2014-11-17T16:00:00.000Z</published>
     <updated>2016-03-18T08:50:46.000Z</updated>
     
@@ -997,17 +997,17 @@
     
     </summary>
     
-      <category term="algorithm" scheme="http://www.ezlippi.com/categories/algorithm/"/>
+      <category term="algorithm" scheme="https://www.ezlippi.com/categories/algorithm/"/>
     
     
-      <category term="数据库" scheme="http://www.ezlippi.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="https://www.ezlippi.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>java中内部类</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/java-inner-class.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/java-inner-class.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/java-inner-class.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/java-inner-class.html</id>
     <published>2014-11-13T16:00:00.000Z</published>
     <updated>2016-02-29T13:22:15.000Z</updated>
     
@@ -1020,23 +1020,23 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="接口" scheme="http://www.ezlippi.com/tags/%E6%8E%A5%E5%8F%A3/"/>
+      <category term="接口" scheme="https://www.ezlippi.com/tags/%E6%8E%A5%E5%8F%A3/"/>
     
-      <category term="继承" scheme="http://www.ezlippi.com/tags/%E7%BB%A7%E6%89%BF/"/>
+      <category term="继承" scheme="https://www.ezlippi.com/tags/%E7%BB%A7%E6%89%BF/"/>
     
-      <category term="复用" scheme="http://www.ezlippi.com/tags/%E5%A4%8D%E7%94%A8/"/>
+      <category term="复用" scheme="https://www.ezlippi.com/tags/%E5%A4%8D%E7%94%A8/"/>
     
   </entry>
   
   <entry>
     <title>java同步容器与并发容器</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/java-concurrent-collections.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/java-concurrent-collections.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/java-concurrent-collections.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/java-concurrent-collections.html</id>
     <published>2014-11-07T16:00:00.000Z</published>
     <updated>2016-03-21T11:58:24.000Z</updated>
     
@@ -1046,17 +1046,17 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>java中NIO与传统IO</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/java-nio.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/java-nio.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/java-nio.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/java-nio.html</id>
     <published>2014-10-31T16:00:00.000Z</published>
     <updated>2016-03-01T05:17:06.000Z</updated>
     
@@ -1067,43 +1067,23 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="NIO" scheme="http://www.ezlippi.com/tags/NIO/"/>
+      <category term="NIO" scheme="https://www.ezlippi.com/tags/NIO/"/>
     
-      <category term="IO" scheme="http://www.ezlippi.com/tags/IO/"/>
+      <category term="IO" scheme="https://www.ezlippi.com/tags/IO/"/>
     
-      <category term="阻塞" scheme="http://www.ezlippi.com/tags/%E9%98%BB%E5%A1%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android消息推送方式</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/android-push.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/android-push.html</id>
-    <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-03-01T05:16:43.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;当我们开发需要和服务器交互的应用程序时，基本上都需要获取服务器端的数据，比如《地震及时通》就需要及时获取服务器上最新的地震信息。要获取服务器上不定时更新的信息一般来说有两种方法，第一种是客户端使用&lt;strong&gt;Pull（拉）&lt;/strong&gt;的方式，隔一段时间就去服务器上获取信息，看是否有更新的信息出现。第二种就是服务器使用&lt;strong&gt;Push（推送）&lt;/strong&gt;的方式，当服务器端有新信息了，则把最新的信息Push到客户端上。&lt;br&gt;虽然Pull和Push两种方式都能实现获取服务器端更新信息的功能，但是明显来说&lt;strong&gt;Push is better than pull&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;因为Pull方式更费客户端的网络流量，更主要的是费电量。&lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
-    
-    
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
+      <category term="阻塞" scheme="https://www.ezlippi.com/tags/%E9%98%BB%E5%A1%9E/"/>
     
   </entry>
   
   <entry>
     <title>如何评价『黑客与画家』</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
     <published>2014-10-31T16:00:00.000Z</published>
     <updated>2016-02-29T12:35:55.000Z</updated>
     
@@ -1114,41 +1094,37 @@
     
     </summary>
     
-      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
+      <category term="book" scheme="https://www.ezlippi.com/categories/book/"/>
     
     
-      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
+      <category term="book" scheme="https://www.ezlippi.com/tags/book/"/>
     
   </entry>
   
   <entry>
-    <title>XMPP协议分析-具体分析</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/xmpp-analise.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/xmpp-analise.html</id>
-    <published>2014-10-30T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:35.000Z</updated>
+    <title>Android消息推送方式</title>
+    <link href="https://www.ezlippi.com//blog/2014/11/android-push.html"/>
+    <id>https://www.ezlippi.com//blog/2014/11/android-push.html</id>
+    <published>2014-10-31T16:00:00.000Z</published>
+    <updated>2016-03-01T05:16:43.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;通过WireShark抓包来具体分析XMPP协议，下面用人人桌面版演示了，XMPP客户端从登录到获取新鲜事的过程，通过分析具体的数据包能够更容易的理解协议。&lt;br&gt;
+      &lt;p&gt;当我们开发需要和服务器交互的应用程序时，基本上都需要获取服务器端的数据，比如《地震及时通》就需要及时获取服务器上最新的地震信息。要获取服务器上不定时更新的信息一般来说有两种方法，第一种是客户端使用&lt;strong&gt;Pull（拉）&lt;/strong&gt;的方式，隔一段时间就去服务器上获取信息，看是否有更新的信息出现。第二种就是服务器使用&lt;strong&gt;Push（推送）&lt;/strong&gt;的方式，当服务器端有新信息了，则把最新的信息Push到客户端上。&lt;br&gt;虽然Pull和Push两种方式都能实现获取服务器端更新信息的功能，但是明显来说&lt;strong&gt;Push is better than pull&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;因为Pull方式更费客户端的网络流量，更主要的是费电量。&lt;/strong&gt;&lt;br&gt;
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="xmpp" scheme="http://www.ezlippi.com/tags/xmpp/"/>
-    
-      <category term="jabber" scheme="http://www.ezlippi.com/tags/jabber/"/>
-    
-      <category term="openfire" scheme="http://www.ezlippi.com/tags/openfire/"/>
+      <category term="消息推送" scheme="https://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
   <entry>
     <title>Androidpn 消息推送总结</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
     <published>2014-10-30T16:00:00.000Z</published>
     <updated>2016-02-29T12:35:27.000Z</updated>
     
@@ -1159,42 +1135,43 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
+      <category term="消息推送" scheme="https://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
   <entry>
-    <title>Smack开发手册</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/how%20to%20use%20smack.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/how to use smack.html</id>
-    <published>2014-10-29T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:22.000Z</updated>
+    <title>XMPP协议分析-具体分析</title>
+    <link href="https://www.ezlippi.com//blog/2014/10/xmpp-analise.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/xmpp-analise.html</id>
+    <published>2014-10-30T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:35.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这篇文章翻译自Smack的官方文档，&lt;a href=&quot;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&quot;&gt;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&lt;/a&gt;，转载请注明出处。&lt;/p&gt;
-&lt;p&gt;Smack是一个为使用XMPP服务器聊天和发送即时消息交流而提供的库。&lt;br&gt;
+      &lt;p&gt;通过WireShark抓包来具体分析XMPP协议，下面用人人桌面版演示了，XMPP客户端从登录到获取新鲜事的过程，通过分析具体的数据包能够更容易的理解协议。&lt;br&gt;
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="xmpp" scheme="https://www.ezlippi.com/tags/xmpp/"/>
     
-      <category term="消息推送， server， client" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%EF%BC%8C-server%EF%BC%8C-client/"/>
+      <category term="jabber" scheme="https://www.ezlippi.com/tags/jabber/"/>
+    
+      <category term="openfire" scheme="https://www.ezlippi.com/tags/openfire/"/>
     
   </entry>
   
   <entry>
     <title>AndroidPN消息推送</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-introduction.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/10/androidDP-introduction.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/androidDP-introduction.html</id>
     <published>2014-10-29T16:00:00.000Z</published>
     <updated>2016-02-29T12:35:13.000Z</updated>
     
@@ -1205,19 +1182,42 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
-      <category term="消息推送， server， client" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%EF%BC%8C-server%EF%BC%8C-client/"/>
+      <category term="消息推送， server， client" scheme="https://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%EF%BC%8C-server%EF%BC%8C-client/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Smack开发手册</title>
+    <link href="https://www.ezlippi.com//blog/2014/10/how%20to%20use%20smack.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/how to use smack.html</id>
+    <published>2014-10-29T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章翻译自Smack的官方文档，&lt;a href=&quot;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&quot;&gt;http://www.igniterealtime.org/builds/smack/docs/latest/documentation/&lt;/a&gt;，转载请注明出处。&lt;/p&gt;
+&lt;p&gt;Smack是一个为使用XMPP服务器聊天和发送即时消息交流而提供的库。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
+    
+    
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
+    
+      <category term="消息推送， server， client" scheme="https://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%EF%BC%8C-server%EF%BC%8C-client/"/>
     
   </entry>
   
   <entry>
     <title>XMPP协议分析-原理</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/xmpp.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/xmpp.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/10/xmpp.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/xmpp.html</id>
     <published>2014-10-27T16:00:00.000Z</published>
     <updated>2016-02-29T12:35:07.000Z</updated>
     
@@ -1227,21 +1227,21 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="xmpp" scheme="http://www.ezlippi.com/tags/xmpp/"/>
+      <category term="xmpp" scheme="https://www.ezlippi.com/tags/xmpp/"/>
     
-      <category term="jabber" scheme="http://www.ezlippi.com/tags/jabber/"/>
+      <category term="jabber" scheme="https://www.ezlippi.com/tags/jabber/"/>
     
-      <category term="openfire" scheme="http://www.ezlippi.com/tags/openfire/"/>
+      <category term="openfire" scheme="https://www.ezlippi.com/tags/openfire/"/>
     
   </entry>
   
   <entry>
     <title>使用Jfreechart生成曲线显示到JSP中</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/jsp-jfreechart.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/jsp-jfreechart.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/10/jsp-jfreechart.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/jsp-jfreechart.html</id>
     <published>2014-10-21T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:59.000Z</updated>
     
@@ -1251,17 +1251,17 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="jsp，servlet，html，jfreechart" scheme="http://www.ezlippi.com/tags/jsp%EF%BC%8Cservlet%EF%BC%8Chtml%EF%BC%8Cjfreechart/"/>
+      <category term="jsp，servlet，html，jfreechart" scheme="https://www.ezlippi.com/tags/jsp%EF%BC%8Cservlet%EF%BC%8Chtml%EF%BC%8Cjfreechart/"/>
     
   </entry>
   
   <entry>
     <title>当我们打开网页时发生了什么</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/how-http-works.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/how-http-works.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/10/how-http-works.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/how-http-works.html</id>
     <published>2014-10-10T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:49.000Z</updated>
     
@@ -1277,21 +1277,21 @@
     
     </summary>
     
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/categories/web/"/>
     
     
-      <category term="http" scheme="http://www.ezlippi.com/tags/http/"/>
+      <category term="http" scheme="https://www.ezlippi.com/tags/http/"/>
     
-      <category term="dns" scheme="http://www.ezlippi.com/tags/dns/"/>
+      <category term="dns" scheme="https://www.ezlippi.com/tags/dns/"/>
     
-      <category term="web" scheme="http://www.ezlippi.com/tags/web/"/>
+      <category term="web" scheme="https://www.ezlippi.com/tags/web/"/>
     
   </entry>
   
   <entry>
     <title>值得推荐的android开源框架</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/android-opensource.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/android-opensource.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/10/android-opensource.html"/>
+    <id>https://www.ezlippi.com//blog/2014/10/android-opensource.html</id>
     <published>2014-09-30T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:42.000Z</updated>
     
@@ -1308,19 +1308,19 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.ezlippi.com/categories/Android/"/>
+      <category term="Android" scheme="https://www.ezlippi.com/categories/Android/"/>
     
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
-      <category term="开源" scheme="http://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
+      <category term="开源" scheme="https://www.ezlippi.com/tags/%E5%BC%80%E6%BA%90/"/>
     
   </entry>
   
   <entry>
     <title>关于返回 Null 值的问题</title>
-    <link href="http://www.ezlippi.com//blog/2014/09/returning-null.html"/>
-    <id>http://www.ezlippi.com//blog/2014/09/returning-null.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/09/returning-null.html"/>
+    <id>https://www.ezlippi.com//blog/2014/09/returning-null.html</id>
     <published>2014-09-17T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:35.000Z</updated>
     
@@ -1330,21 +1330,21 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/java/reprints/"/>
+      <category term="reprints" scheme="https://www.ezlippi.com/categories/java/reprints/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="技巧" scheme="http://www.ezlippi.com/tags/%E6%8A%80%E5%B7%A7/"/>
+      <category term="技巧" scheme="https://www.ezlippi.com/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
     <title>为什么 jdk 中把 String 类设计成 final</title>
-    <link href="http://www.ezlippi.com//blog/2014/08/why-jdk-string-is-final.html"/>
-    <id>http://www.ezlippi.com//blog/2014/08/why-jdk-string-is-final.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/08/why-jdk-string-is-final.html"/>
+    <id>https://www.ezlippi.com//blog/2014/08/why-jdk-string-is-final.html</id>
     <published>2014-08-28T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:27.000Z</updated>
     
@@ -1354,21 +1354,21 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/java/reprints/"/>
+      <category term="reprints" scheme="https://www.ezlippi.com/categories/java/reprints/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="final" scheme="http://www.ezlippi.com/tags/final/"/>
+      <category term="final" scheme="https://www.ezlippi.com/tags/final/"/>
     
   </entry>
   
   <entry>
     <title>处理并发之二：libevent的eventbuffer</title>
-    <link href="http://www.ezlippi.com//blog/2014/08/libevent.html"/>
-    <id>http://www.ezlippi.com//blog/2014/08/libevent.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/08/libevent.html"/>
+    <id>https://www.ezlippi.com//blog/2014/08/libevent.html</id>
     <published>2014-08-23T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:20.000Z</updated>
     
@@ -1388,19 +1388,19 @@
     
     </summary>
     
-      <category term="c" scheme="http://www.ezlippi.com/categories/c/"/>
+      <category term="c" scheme="https://www.ezlippi.com/categories/c/"/>
     
     
-      <category term="c++" scheme="http://www.ezlippi.com/tags/c/"/>
+      <category term="c++" scheme="https://www.ezlippi.com/tags/c/"/>
     
-      <category term="concurrent" scheme="http://www.ezlippi.com/tags/concurrent/"/>
+      <category term="concurrent" scheme="https://www.ezlippi.com/tags/concurrent/"/>
     
   </entry>
   
   <entry>
     <title>处理并发之一：LINUX Epoll机制介绍</title>
-    <link href="http://www.ezlippi.com//blog/2014/08/linux-epoll.html"/>
-    <id>http://www.ezlippi.com//blog/2014/08/linux-epoll.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/08/linux-epoll.html"/>
+    <id>https://www.ezlippi.com//blog/2014/08/linux-epoll.html</id>
     <published>2014-08-22T16:00:00.000Z</published>
     <updated>2016-03-18T08:43:00.000Z</updated>
     
@@ -1411,19 +1411,19 @@
     
     </summary>
     
-      <category term="c" scheme="http://www.ezlippi.com/categories/c/"/>
+      <category term="c" scheme="https://www.ezlippi.com/categories/c/"/>
     
     
-      <category term="c++" scheme="http://www.ezlippi.com/tags/c/"/>
+      <category term="c++" scheme="https://www.ezlippi.com/tags/c/"/>
     
-      <category term="concurrent" scheme="http://www.ezlippi.com/tags/concurrent/"/>
+      <category term="concurrent" scheme="https://www.ezlippi.com/tags/concurrent/"/>
     
   </entry>
   
   <entry>
     <title>java编程的78条黄金法则</title>
-    <link href="http://www.ezlippi.com//blog/2014/08/78-golden-rules-of-the-java-programming.html"/>
-    <id>http://www.ezlippi.com//blog/2014/08/78-golden-rules-of-the-java-programming.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/08/78-golden-rules-of-the-java-programming.html"/>
+    <id>https://www.ezlippi.com//blog/2014/08/78-golden-rules-of-the-java-programming.html</id>
     <published>2014-08-15T16:00:00.000Z</published>
     <updated>2016-02-29T12:34:04.000Z</updated>
     
@@ -1435,19 +1435,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/java/reprints/"/>
+      <category term="reprints" scheme="https://www.ezlippi.com/categories/java/reprints/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>java并发和多线程</title>
-    <link href="http://www.ezlippi.com//blog/2014/08/java-multithread.html"/>
-    <id>http://www.ezlippi.com//blog/2014/08/java-multithread.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/08/java-multithread.html"/>
+    <id>https://www.ezlippi.com//blog/2014/08/java-multithread.html</id>
     <published>2014-08-01T16:00:00.000Z</published>
     <updated>2016-02-29T12:33:57.000Z</updated>
     
@@ -1459,19 +1459,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="多线程" scheme="http://www.ezlippi.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="https://www.ezlippi.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Android UI线程和子线程、Service通信</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/android-UI-Thread.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/android-UI-Thread.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/android-UI-Thread.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/android-UI-Thread.html</id>
     <published>2014-07-18T16:00:00.000Z</published>
     <updated>2016-02-29T12:33:50.000Z</updated>
     
@@ -1483,19 +1483,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>从android.os.NetworkOnMainThreadException引发的思考</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/android-networkOnMainThreadException.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/android-networkOnMainThreadException.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/android-networkOnMainThreadException.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/android-networkOnMainThreadException.html</id>
     <published>2014-07-17T16:00:00.000Z</published>
     <updated>2016-02-29T12:33:37.000Z</updated>
     
@@ -1505,19 +1505,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+      <category term="android" scheme="https://www.ezlippi.com/tags/android/"/>
     
   </entry>
   
   <entry>
     <title>使用jekyll在Github上搭建博客</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/use-jekyll-build-blog-on-github.html</id>
     <published>2014-07-14T16:00:00.000Z</published>
     <updated>2016-02-29T12:33:07.000Z</updated>
     
@@ -1527,21 +1527,21 @@
     
     </summary>
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/categories/jekyll/"/>
     
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/jekyll/reprints/"/>
+      <category term="reprints" scheme="https://www.ezlippi.com/categories/jekyll/reprints/"/>
     
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/tags/jekyll/"/>
     
-      <category term="github" scheme="http://www.ezlippi.com/tags/github/"/>
+      <category term="github" scheme="https://www.ezlippi.com/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>一个合格的程序员应该读过哪些书</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/qualified-programmer-should-read-what-books.html</id>
     <published>2014-07-14T16:00:00.000Z</published>
     <updated>2016-02-29T12:32:57.000Z</updated>
     
@@ -1551,23 +1551,23 @@
     
     </summary>
     
-      <category term="other" scheme="http://www.ezlippi.com/categories/other/"/>
+      <category term="other" scheme="https://www.ezlippi.com/categories/other/"/>
     
-      <category term="programming" scheme="http://www.ezlippi.com/categories/other/programming/"/>
+      <category term="programming" scheme="https://www.ezlippi.com/categories/other/programming/"/>
     
-      <category term="reprints" scheme="http://www.ezlippi.com/categories/other/programming/reprints/"/>
+      <category term="reprints" scheme="https://www.ezlippi.com/categories/other/programming/reprints/"/>
     
     
-      <category term="书籍" scheme="http://www.ezlippi.com/tags/%E4%B9%A6%E7%B1%8D/"/>
+      <category term="书籍" scheme="https://www.ezlippi.com/tags/%E4%B9%A6%E7%B1%8D/"/>
     
-      <category term="程序" scheme="http://www.ezlippi.com/tags/%E7%A8%8B%E5%BA%8F/"/>
+      <category term="程序" scheme="https://www.ezlippi.com/tags/%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>Markdown 语法 (简体中文版)</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/markdown-syntax.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/markdown-syntax.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/markdown-syntax.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/markdown-syntax.html</id>
     <published>2014-07-10T16:00:00.000Z</published>
     <updated>2016-03-18T07:31:33.000Z</updated>
     
@@ -1577,19 +1577,19 @@
     
     </summary>
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/categories/jekyll/"/>
     
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/tags/jekyll/"/>
     
-      <category term="markdown" scheme="http://www.ezlippi.com/tags/markdown/"/>
+      <category term="markdown" scheme="https://www.ezlippi.com/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>markdown 快速入门</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/markdown-basics.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/markdown-basics.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/markdown-basics.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/markdown-basics.html</id>
     <published>2014-07-09T16:00:00.000Z</published>
     <updated>2016-03-18T07:29:21.000Z</updated>
     
@@ -1601,19 +1601,19 @@
     
     </summary>
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/categories/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/categories/jekyll/"/>
     
     
-      <category term="jekyll" scheme="http://www.ezlippi.com/tags/jekyll/"/>
+      <category term="jekyll" scheme="https://www.ezlippi.com/tags/jekyll/"/>
     
-      <category term="markdown" scheme="http://www.ezlippi.com/tags/markdown/"/>
+      <category term="markdown" scheme="https://www.ezlippi.com/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>C语言高级编程指南</title>
-    <link href="http://www.ezlippi.com//blog/2014/07/c-advaced-programming.html"/>
-    <id>http://www.ezlippi.com//blog/2014/07/c-advaced-programming.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/07/c-advaced-programming.html"/>
+    <id>https://www.ezlippi.com//blog/2014/07/c-advaced-programming.html</id>
     <published>2014-07-04T16:00:00.000Z</published>
     <updated>2016-03-18T08:32:35.000Z</updated>
     
@@ -1636,21 +1636,21 @@
     
     </summary>
     
-      <category term="c" scheme="http://www.ezlippi.com/categories/c/"/>
+      <category term="c" scheme="https://www.ezlippi.com/categories/c/"/>
     
-      <category term="programming" scheme="http://www.ezlippi.com/categories/c/programming/"/>
+      <category term="programming" scheme="https://www.ezlippi.com/categories/c/programming/"/>
     
     
-      <category term="c" scheme="http://www.ezlippi.com/tags/c/"/>
+      <category term="c" scheme="https://www.ezlippi.com/tags/c/"/>
     
-      <category term="programming" scheme="http://www.ezlippi.com/tags/programming/"/>
+      <category term="programming" scheme="https://www.ezlippi.com/tags/programming/"/>
     
   </entry>
   
   <entry>
     <title>Java编程Tips</title>
-    <link href="http://www.ezlippi.com//blog/2014/06/26-methods-to-improve-java-performance.html"/>
-    <id>http://www.ezlippi.com//blog/2014/06/26-methods-to-improve-java-performance.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/06/26-methods-to-improve-java-performance.html"/>
+    <id>https://www.ezlippi.com//blog/2014/06/26-methods-to-improve-java-performance.html</id>
     <published>2014-06-17T16:00:00.000Z</published>
     <updated>2016-02-29T12:32:17.000Z</updated>
     
@@ -1660,19 +1660,19 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="java" scheme="http://www.ezlippi.com/tags/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/tags/java/"/>
     
-      <category term="性能" scheme="http://www.ezlippi.com/tags/%E6%80%A7%E8%83%BD/"/>
+      <category term="性能" scheme="https://www.ezlippi.com/tags/%E6%80%A7%E8%83%BD/"/>
     
   </entry>
   
   <entry>
     <title>在雨中</title>
-    <link href="http://www.ezlippi.com//blog/2014/06//blog/2014/06/15/in-the-rain.html.html"/>
-    <id>http://www.ezlippi.com//blog/2014/06//blog/2014/06/15/in-the-rain.html.html</id>
+    <link href="https://www.ezlippi.com//blog/2014/06//blog/2014/06/15/in-the-rain.html.html"/>
+    <id>https://www.ezlippi.com//blog/2014/06//blog/2014/06/15/in-the-rain.html.html</id>
     <published>2014-06-14T17:05:13.000Z</published>
     <updated>2015-08-21T07:35:33.000Z</updated>
     
@@ -1683,12 +1683,12 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.ezlippi.com/categories/java/"/>
+      <category term="java" scheme="https://www.ezlippi.com/categories/java/"/>
     
     
-      <category term="Life" scheme="http://www.ezlippi.com/tags/Life/"/>
+      <category term="Life" scheme="https://www.ezlippi.com/tags/Life/"/>
     
-      <category term="生活" scheme="http://www.ezlippi.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://www.ezlippi.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
