@@ -534,13 +534,6 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/Java/</loc>
-        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.ezlippi.com/tags/MyBatis/</loc>
         <lastmod>2017-03-11T15:43:23.549Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -578,6 +571,34 @@
     <url>
         <loc>http://www.ezlippi.com/tags/SED/</loc>
         <lastmod>2017-03-11T15:48:16.878Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Java/</loc>
+        <lastmod>2017-08-06T11:52:48.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Junit/</loc>
+        <lastmod>2017-08-06T11:52:48.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/PowerMock/</loc>
+        <lastmod>2017-08-06T11:52:48.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Mock/</loc>
+        <lastmod>2017-08-06T11:52:48.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

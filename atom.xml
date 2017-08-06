@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ezlippi.com/"/>
-  <updated>2017-03-11T14:17:23.308Z</updated>
+  <updated>2017-08-06T11:52:48.118Z</updated>
   <id>http://www.ezlippi.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单元测试框架PowerMock教程</title>
+    <link href="http://www.ezlippi.com//blog/2017/08/powermock-introduction.html"/>
+    <id>http://www.ezlippi.com//blog/2017/08/powermock-introduction.html</id>
+    <published>2017-08-06T05:38:32.000Z</published>
+    <updated>2017-08-06T11:52:48.118Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mockito 是一个针对 Java 的单元测试模拟框架，它与 EasyMock 和 jMock 很相似，都是为了简化单元测试过程中测试上下文的搭建而开发的工具。&lt;/p&gt;
+&lt;p&gt;PowerMock 也是一个单元测试模拟框架，它是在其它单元测试模拟框架的基础上做出的扩展。通过提供定制的类加载器以及一些字节码篡改技巧的应用，PowerMock 现了对静态方法、构造方法、私有方法以及 Final 方法的模拟支持，对静态初始化过程的移除等强大的功能。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://www.ezlippi.com/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://www.ezlippi.com/tags/Java/"/>
+    
+      <category term="Junit" scheme="http://www.ezlippi.com/tags/Junit/"/>
+    
+      <category term="PowerMock" scheme="http://www.ezlippi.com/tags/PowerMock/"/>
+    
+      <category term="Mock" scheme="http://www.ezlippi.com/tags/Mock/"/>
+    
+  </entry>
   
   <entry>
     <title>ElasticSearch Java客户端介绍</title>
@@ -1122,6 +1149,29 @@
   </entry>
   
   <entry>
+    <title>Androidpn 消息推送总结</title>
+    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
+    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
+    <published>2014-10-30T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:27.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Androidpn 开源项目托管地址：&lt;a href=&quot;http://sourceforge.net/projects/androidpn/&quot;&gt;http://sourceforge.net/projects/androidpn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Androidpn 开源项目自身描述：This is an open source project to provide push notification support for Android, a xmpp based notification server and a client tool kit.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
+    
+    
+      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
+    
+      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
+    
+  </entry>
+  
+  <entry>
     <title>XMPP协议分析-具体分析</title>
     <link href="http://www.ezlippi.com//blog/2014/10/xmpp-analise.html"/>
     <id>http://www.ezlippi.com//blog/2014/10/xmpp-analise.html</id>
@@ -1142,29 +1192,6 @@
       <category term="jabber" scheme="http://www.ezlippi.com/tags/jabber/"/>
     
       <category term="openfire" scheme="http://www.ezlippi.com/tags/openfire/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Androidpn 消息推送总结</title>
-    <link href="http://www.ezlippi.com//blog/2014/10/androidDP-project.html"/>
-    <id>http://www.ezlippi.com//blog/2014/10/androidDP-project.html</id>
-    <published>2014-10-30T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:27.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Androidpn 开源项目托管地址：&lt;a href=&quot;http://sourceforge.net/projects/androidpn/&quot;&gt;http://sourceforge.net/projects/androidpn/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Androidpn 开源项目自身描述：This is an open source project to provide push notification support for Android, a xmpp based notification server and a client tool kit.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="web" scheme="http://www.ezlippi.com/categories/web/"/>
-    
-    
-      <category term="android" scheme="http://www.ezlippi.com/tags/android/"/>
-    
-      <category term="消息推送" scheme="http://www.ezlippi.com/tags/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/"/>
     
   </entry>
   
