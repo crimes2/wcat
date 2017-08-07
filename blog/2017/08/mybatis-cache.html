@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="web,linux," />
+  <meta name="keywords" content="Java,MyBatis,DataBase,Dao," />
 
 
 
@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="安装Apache">
+<meta name="description" content="一级缓存一级缓存是本地缓存，和BaseExecutor关联,BaseExecutor有三个实现类，SimpleExecutor、ReuseExecutor和BatchExecutor,SqlSession初始化时会创建Executor的实例，Mybatis默认使用的是SimpleExecutor,初始化代码如下所示:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu下Apache服务器的配置">
-<meta property="og:url" content="http://www.ezlippi.com/blog/2016/01/apache-configuration-in-ubuntu.html">
+<meta property="og:title" content="MyBatis 缓存介绍">
+<meta property="og:url" content="http://www.ezlippi.com/blog/2017/08/mybatis-cache.html">
 <meta property="og:site_name" content="EZLippi-浮生志">
-<meta property="og:description" content="安装Apache">
-<meta property="og:updated_time" content="2016-02-29T13:53:50.000Z">
+<meta property="og:description" content="一级缓存一级缓存是本地缓存，和BaseExecutor关联,BaseExecutor有三个实现类，SimpleExecutor、ReuseExecutor和BatchExecutor,SqlSession初始化时会创建Executor的实例，Mybatis默认使用的是SimpleExecutor,初始化代码如下所示:">
+<meta property="og:updated_time" content="2017-08-07T14:32:51.315Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu下Apache服务器的配置">
-<meta name="twitter:description" content="安装Apache">
+<meta name="twitter:title" content="MyBatis 缓存介绍">
+<meta name="twitter:description" content="一级缓存一级缓存是本地缓存，和BaseExecutor关联,BaseExecutor有三个实现类，SimpleExecutor、ReuseExecutor和BatchExecutor,SqlSession初始化时会创建Executor的实例，Mybatis默认使用的是SimpleExecutor,初始化代码如下所示:">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.ezlippi.com/blog/2016/01/apache-configuration-in-ubuntu.html"/>
+  <link rel="canonical" href="http://www.ezlippi.com/blog/2017/08/mybatis-cache.html"/>
 
 
 
 
 
-  <title> Ubuntu下Apache服务器的配置 | EZLippi-浮生志 </title>
+  <title> MyBatis 缓存介绍 | EZLippi-浮生志 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -299,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.ezlippi.com/blog/2016/01/apache-configuration-in-ubuntu.html">
+  <link itemprop="mainEntityOfPage" href="http://www.ezlippi.com/blog/2017/08/mybatis-cache.html">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="EZLippi">
@@ -323,7 +323,7 @@
             
             
               
-                Ubuntu下Apache服务器的配置
+                MyBatis 缓存介绍
               
             
           </h2>
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-20T00:00:00+08:00">
-                2016-01-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-07T13:38:32+08:00">
+                2017-08-07
               </time>
             
 
@@ -361,8 +361,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Unix-Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Unix/Linux</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -379,8 +379,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/2016/01/apache-configuration-in-ubuntu.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="/blog/2016/01/apache-configuration-in-ubuntu.html" itemprop="commentCount"></span>
+                <a href="/blog/2017/08/mybatis-cache.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="/blog/2017/08/mybatis-cache.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -409,70 +409,16 @@
       
 
       
-        <h2 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h2><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install apache2</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">打开浏览器输入你的IP地址或者localhost,就会进入到Apache服务器的默认Index页面。结果如下所示：</span><br><span class="line"></span><br><span class="line">&gt; It works!</span><br><span class="line">&gt; This is the default web page <span class="keyword">for</span> this server.</span><br><span class="line">&gt; The web server software is running but no content has been added, yet.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">## 配置文件</span></span><br><span class="line"></span><br><span class="line">在Ubuntu系统下Apache的主要配置文件在/etc/apache2文件夹下：</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line"><span class="built_in">cd</span> /etc/apache2</span><br><span class="line">ls -F</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>apache2.conf  envvars     magic            mods-enabled/  sites-available/<br>conf.d/       httpd.conf  mods-available/  ports.conf     sites-enabled/</p>
-</blockquote>
-<p>这个目录下有许多纯文本文件和子目录，基本作用如下：</p>
-<ul>
-<li>apache2.conf:这是服务器的主要配置文件，几乎所有的配置都通过这个文件来完成，但是为了简洁推荐使用单独的指定的文件来配置不同的模块。</li>
-<li>ports.conf:这个文件用来指定虚拟主机监听的端口号，如果你配置了SSL的时候要检查这个文件是否正确。</li>
-<li>conf.d/:这个目录用来控制Apache的一些特殊配置，比如SSL配置。</li>
-<li>sites-available/:这个目录包括所有不同web站点的虚拟主机文件，不同的请求对应不同的内容，这些都是已有的，并不是正在使用的。</li>
-<li>sites-enabled/:这个目录包含正在使用的虚拟主机的定义，通常只包含到sites-available目录下文件的符号链接。</li>
-<li>mods-[enabled,available]/:和上面的类似，只不过这里面包含的是可用的模块。</li>
-</ul>
-<p>从Apache的配置目录结构可以知道，它并不是通过单一的文件来配置，贰拾通过模块化来把整个系统拆分成不同的功能，从而能够动态地增加和修改功能。</p>
-<h2 id="深入Apache2-conf文件内容"><a href="#深入Apache2-conf文件内容" class="headerlink" title="深入Apache2.conf文件内容"></a>深入Apache2.conf文件内容</h2><p>文件主要分成三部分，全局配置、默认服务器配置和虚拟主机配置，在Ubuntu系统下，这个文件主要负责全局配置，默认服务器和虚拟主机可以通过Include语句来处理。</p>
-<p>Include语句允许Apache读取其他配置文件的内容到当前位置，结果就是Apache启动的时候动态生成一个配置文件，如果拉到文件底部会看到很多Include语句，比如ports.conf等。</p>
-<h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><h4 id="Timeout"><a href="#Timeout" class="headerlink" title="Timeout"></a>Timeout</h4><p>这个参数默认设置为300，意思是服务器有300s来处理每个请求。</p>
-<h4 id="KeepAlive"><a href="#KeepAlive" class="headerlink" title="KeepAlive"></a>KeepAlive</h4><p>如果设置为On，将允许同个客户端每个连接一直保持来处理多个请求(HTTP长连接)</p>
-<h4 id="MaxKeepAliveRequests"><a href="#MaxKeepAliveRequests" class="headerlink" title="MaxKeepAliveRequests"></a>MaxKeepAliveRequests</h4><p>这个参数用来设置每个连接最多能处理多少个单独的请求</p>
-<h4 id="KeepAliveTimeout"><a href="#KeepAliveTimeout" class="headerlink" title="KeepAliveTimeout"></a>KeepAliveTimeout</h4><p>这个参数设置下一个请求来之前来等待多久，超过这个时间自动关闭这个connection。</p>
-<h2 id="MPM-配置"><a href="#MPM-配置" class="headerlink" title="MPM 配置"></a>MPM 配置</h2><p>Ubuntu 14.04下MPM(Multi-Processing Module)配置默认采用了event module,如果你系统采用的是prefork module,可以通过如下方法来切换：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo a2dismod mpm_prefork</span><br><span class="line">sudo a2enmod mpm_event</span><br><span class="line">sudo service apache2 restart</span><br></pre></td></tr></table></figure>
-<h2 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h2><p>1.首先禁用默认的Apache虚拟主机：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo a2dissite 000-default.conf</span><br></pre></td></tr></table></figure>
-<p>2.在/etc/apache2/sites-available目录下创建一个example.com.conf文件，把example.com替换成你的域名：</p>
-<p>文件：/etc/apache2/sites-available/example.com.conf</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt; </span><br><span class="line">  ServerAdmin webmaster@example.com</span><br><span class="line">  ServerName example.com</span><br><span class="line">  ServerAlias www.example.com</span><br><span class="line">  DocumentRoot /var/www/example.com/public_html/</span><br><span class="line">  ErrorLog /var/www/example.com/logs/error.log </span><br><span class="line">  CustomLog /var/www/example.com/logs/access.log combined</span><br><span class="line"> &lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure>
-<p> 3.给你的网站内容和日志文件创建目录，把example.com替换成你的域名：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /var/www/example.com/public_html</span><br><span class="line">sudo mkdir /var/www/example.com/logs</span><br></pre></td></tr></table></figure>
-<p> 4.启用这个站点：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo a2ensite example.com.conf</span><br></pre></td></tr></table></figure>
-<p> 5.重启Apache</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service apache2 restart</span><br></pre></td></tr></table></figure>
-<p> <em>安装对脚本语言的支持</em></p>
-<ul>
-<li>Perl support:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libapache2-mod-perl2</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Python support:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libapache2-mod-python</span><br></pre></td></tr></table></figure>
-<ul>
-<li>PHP support:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libapache2-mod-php5 php5 php-pear php5-xcache</span><br></pre></td></tr></table></figure>
-<h3 id="Apache中启用和禁用网站和模块"><a href="#Apache中启用和禁用网站和模块" class="headerlink" title="Apache中启用和禁用网站和模块"></a>Apache中启用和禁用网站和模块</h3><p>1.启用和禁用网站：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo a2ensite 虚拟主机文件名(example.com.conf)</span><br><span class="line">sudo a2dissite 虚拟主机文件名(example.com.conf)</span><br></pre></td></tr></table></figure>
-<p>2.启用和禁用模块</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo a2enmod 模块配置文件名</span><br><span class="line">sudo a2dismod  模块配置文件名</span><br></pre></td></tr></table></figure>
-<h2 id="启用用户文件夹实现文件服务器的功能"><a href="#启用用户文件夹实现文件服务器的功能" class="headerlink" title="启用用户文件夹实现文件服务器的功能"></a>启用用户文件夹实现文件服务器的功能</h2><p>1.使用如下命令启用userdir模块:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo a2enmod userdir</span><br></pre></td></tr></table></figure>
-<p>2.编辑userdir.conf配置userdir模块:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/mods-enabled/userdir.conf</span><br></pre></td></tr></table></figure>
-<p>内容如下，把public_html改为你的个人文件夹名称，如果不存在则创建：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_userdir.c&gt;</span><br><span class="line">        UserDir public_html</span><br><span class="line">        UserDir disabled root</span><br><span class="line"> </span><br><span class="line">        &lt;Directory /home/*/public_html&gt;</span><br><span class="line">		AllowOverride All</span><br><span class="line">		Options MultiViews Indexes SymLinksIfOwnerMatch</span><br><span class="line">		&lt;Limit GET POST OPTIONS&gt;</span><br><span class="line">			<span class="comment"># Apache &lt;= 2.2:</span></span><br><span class="line">		        Order allow,deny</span><br><span class="line">		        Allow from all</span><br><span class="line"> </span><br><span class="line">		        <span class="comment"># Apache &gt;= 2.4:</span></span><br><span class="line">		        <span class="comment">#Require all granted</span></span><br><span class="line">		&lt;/Limit&gt;</span><br><span class="line">		&lt;LimitExcept GET POST OPTIONS&gt;</span><br><span class="line">			<span class="comment"># Apache &lt;= 2.2:</span></span><br><span class="line">		        Order deny,allow</span><br><span class="line">		        Deny from all</span><br><span class="line"> </span><br><span class="line">			<span class="comment"># Apache &gt;= 2.4:</span></span><br><span class="line">			<span class="comment">#Require all denied</span></span><br><span class="line">		&lt;/LimitExcept&gt;</span><br><span class="line">        &lt;/Directory&gt;</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
-<p>3.创建个人文件夹并重启APache</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo service apache2 restart</span><br><span class="line">mkdir /home/<span class="variable">$USER</span>/public_html</span><br></pre></td></tr></table></figure>
-<p>接下来在浏览器中输入<a href="http://localhost/~username/就可以访问你的个人文件夹了，把username替换为你的用户名。" target="_blank" rel="external">http://localhost/~username/就可以访问你的个人文件夹了，把username替换为你的用户名。</a></p>
-<h3 id="给你的文件添加访问权限"><a href="#给你的文件添加访问权限" class="headerlink" title="给你的文件添加访问权限"></a>给你的文件添加访问权限</h3><p>把上面的AllowOverride All改为AllowOverride AuthConfig,然后给你的服务器添加认证用户，认证用户保存在/var/www/passwd/中，需要使用htpasswd命令来添加用户，如下所示：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">htpasswd -c /var/www/passwd/public_html lippi </span><br><span class="line">New password: mypassword</span><br><span class="line">Re-type new password: mypassword</span><br><span class="line">Adding password <span class="keyword">for</span> user lippi</span><br></pre></td></tr></table></figure>
-<p>最后的userdir.conf是这样的：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;IfModule mod_userdir.c&gt;</span><br><span class="line">	UserDir public_html </span><br><span class="line">	UserDir disabled root</span><br><span class="line"></span><br><span class="line">	&lt;Directory /home/*/public_html&gt;</span><br><span class="line">		AllowOverride FileInfo AuthConfig Limit Indexes</span><br><span class="line">		Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec</span><br><span class="line">		&lt;Limit GET POST OPTIONS&gt;</span><br><span class="line"><span class="comment">#		Require all granted</span></span><br><span class="line">			AuthType Basic</span><br><span class="line">			AuthName <span class="string">"lippi"</span></span><br><span class="line">			AuthUserFile /var/www/passwd/public_html</span><br><span class="line">			Require valid-user</span><br><span class="line">		&lt;/Limit&gt;</span><br><span class="line">		&lt;LimitExcept GET POST OPTIONS&gt;</span><br><span class="line">			Require all denied</span><br><span class="line">		&lt;/LimitExcept&gt;</span><br><span class="line">	&lt;/Directory&gt;</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="一级缓存"><a href="#一级缓存" class="headerlink" title="一级缓存"></a>一级缓存</h2><p>一级缓存是本地缓存，和BaseExecutor关联,BaseExecutor有三个实现类，SimpleExecutor、ReuseExecutor和BatchExecutor,<br>SqlSession初始化时会创建Executor的实例，Mybatis默认使用的是SimpleExecutor,初始化代码如下所示:</p>
+<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Configuration.java</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Executor <span class="title">newExecutor</span><span class="params">(Transaction transaction, ExecutorType executorType)</span> </span>&#123;</span><br><span class="line">    executorType = executorType == <span class="keyword">null</span> ? defaultExecutorType : executorType;</span><br><span class="line">    executorType = executorType == <span class="keyword">null</span> ? ExecutorType.SIMPLE : executorType;</span><br><span class="line">    Executor executor;</span><br><span class="line">    <span class="keyword">if</span> (ExecutorType.BATCH == executorType) &#123;</span><br><span class="line">      executor = <span class="keyword">new</span> BatchExecutor(<span class="keyword">this</span>, transaction);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ExecutorType.REUSE == executorType) &#123;</span><br><span class="line">      executor = <span class="keyword">new</span> ReuseExecutor(<span class="keyword">this</span>, transaction);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      executor = <span class="keyword">new</span> SimpleExecutor(<span class="keyword">this</span>, transaction);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果启用二级缓存,用CachingExecutor装饰类</span></span><br><span class="line">    <span class="keyword">if</span> (cacheEnabled) &#123;</span><br><span class="line">      executor = <span class="keyword">new</span> CachingExecutor(executor);</span><br><span class="line">    &#125;</span><br><span class="line">    executor = (Executor) interceptorChain.pluginAll(executor);</span><br><span class="line">    <span class="keyword">return</span> executor;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>BaseExecutor初始化时会初始化本地缓存，实现类为PerpetualCache，它的实现比较简单，里面就是一个HashMap来保存对象。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PerpetualCache</span> <span class="keyword">implements</span> <span class="title">Cache</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> Map&lt;Object, Object&gt; cache = <span class="keyword">new</span> HashMap&lt;Object, Object&gt;();</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">PerpetualCache</span><span class="params">(String id)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.id = id;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>一级缓存是SqlSession级别的缓存,在sqlSession提交时会清空本地缓存,因为commit操作一般对应插入、更新或者删除操作，清空缓存防止读取脏数据。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//BaseExecutor.java</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">commit</span><span class="params">(<span class="keyword">boolean</span> required)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (closed) &#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> ExecutorException(<span class="string">"Cannot commit, transaction is already closed"</span>);</span><br><span class="line">&#125;</span><br><span class="line">clearLocalCache();</span><br><span class="line">flushStatements();</span><br><span class="line"><span class="keyword">if</span> (required) &#123;</span><br><span class="line">  transaction.commit();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="二级缓存"><a href="#二级缓存" class="headerlink" title="二级缓存"></a>二级缓存</h2><p>如果用户在全局配置文件SqlMapConfig.xml或者mapper文件里配置了”cacheEnabled=true”，<br>如下所示:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//SqlMapConfig.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"cacheEnabled"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">//UserMapper.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.ezlippi.mybatis.mapper.UserMapper"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 开启本mapper namespace下的二级缓存 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">cache</span></span><br><span class="line">  <span class="attr">eviction</span>=<span class="string">"FIFO"</span>//缓存过期策略,可以是<span class="attr">LRU</span>、<span class="attr">FIFO</span>、<span class="attr">SOFT</span>、<span class="attr">WEAK</span></span><br><span class="line">  <span class="attr">flushInterval</span>=<span class="string">"60000"</span>//缓存刷新间隔,除了语句刷新外到了这个时间间隔强制刷新</span><br><span class="line">  <span class="attr">size</span>=<span class="string">"512"</span></span><br><span class="line">  <span class="attr">readOnly</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>MyBatis在为SqlSession对象创建Executor对象时，会给Executor对象加上一个装饰者：CachingExecutor，这时SqlSession使用CachingExecutor对象来完成操作请求。CachingExecutor对于查询请求，会先判断该查询请求在二级缓存中是否有缓存，如果有则直接返回缓存结果；如果没有再交给真正的Executor对象来完成查询操作，之后CachingExecutor会将真正Executor返回的查询结果放置到缓存中，然后再返回给用户。</p>
+<p>MyBatis的二级缓存是可以热插拔的，你可以用MyBatis自带的LRUCache、FIFOCache等，也可以用第三方的缓存库，比如Memcached或者EhCache,<br>二级缓存的作用域比一级缓存更广，作用域为一个Mapper的namespace,namaspace相同则使用同一个二级缓存区域，比如一个UserMapper类里面有SelectOne()<br>和selectList()两个查询操作，这两个操作共享同一个缓存区域。同一个Mapper的不同SqlSession可以共享一个二级缓存，如果任意一个sqlSession执行了commit()操作<br>则清空该namespace对应的二级缓存。</p>
+<p>你还可以为每条Mapper语句设置是否要刷新缓存,可以指定select语句是否使用缓存,如下所示:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">...</span> <span class="attr">flushCache</span>=<span class="string">"false"</span> <span class="attr">useCache</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">...</span> <span class="attr">flushCache</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">...</span> <span class="attr">flushCache</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">delete</span> <span class="attr">...</span> <span class="attr">flushCache</span>=<span class="string">"true"</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这里需要注意的是:二级缓存需要查询结果映射的pojo对象实现Java.io.Serializable接口,如果存在父类、成员pojo都需要实现序列化接口。<br>最后贴一下CachingExecutor的查询语句:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;E&gt; <span class="function">List&lt;E&gt; <span class="title">query</span><span class="params">(MappedStatement ms, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler, CacheKey key, BoundSql boundSql)</span></span><br><span class="line">  <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line"><span class="comment">//获取MapperStatement关联的Cache，和Mapper的Namespace相关联</span></span><br><span class="line">Cache cache = ms.getCache();</span><br><span class="line"><span class="keyword">if</span> (cache != <span class="keyword">null</span>) &#123;</span><br><span class="line">   <span class="comment">//获取Mapper语句的flushCache配置</span></span><br><span class="line">  flushCacheIfRequired(ms);</span><br><span class="line">  <span class="keyword">if</span> (ms.isUseCache() &amp;&amp; resultHandler == <span class="keyword">null</span>) &#123;</span><br><span class="line">    ensureNoOutParams(ms, parameterObject, boundSql);</span><br><span class="line">    <span class="comment">//从TransactionalCacheManager获取缓存的对象</span></span><br><span class="line">    List&lt;E&gt; list = (List&lt;E&gt;) tcm.getObject(cache, key);</span><br><span class="line">    <span class="comment">//如果缓存中没有找到则调用实际的Executor执行查询语句,然后再更新缓存</span></span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span>) &#123;</span><br><span class="line">      list = delegate.&lt;E&gt; query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);</span><br><span class="line">      tcm.putObject(cache, key, list); <span class="comment">// issue #578 and #116</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> delegate.&lt;E&gt; query(ms, parameterObject, rowBounds, resultHandler, key, boundSql);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -486,9 +432,13 @@
   
         <div class="post-tags">
           
-            <a href="/tags/web/" rel="tag"># web</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/MyBatis/" rel="tag"># MyBatis</a>
+          
+            <a href="/tags/DataBase/" rel="tag"># DataBase</a>
+          
+            <a href="/tags/Dao/" rel="tag"># Dao</a>
           
         </div>
       
@@ -529,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2016/01/tmux-guide.html" rel="next" title="终端复用软件之tmux简介">
-                <i class="fa fa-chevron-left"></i> 终端复用软件之tmux简介
+              <a href="/blog/2017/08/powermock-introduction.html" rel="next" title="单元测试框架PowerMock教程">
+                <i class="fa fa-chevron-left"></i> 单元测试框架PowerMock教程
               </a>
             
           </div>
@@ -538,10 +488,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2016/02/baidu-spider-forbidden.html" rel="prev" title="解决百度爬虫无法抓取github pages">
-                解决百度爬虫无法抓取github pages <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -737,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Apache"><span class="nav-number">1.</span> <span class="nav-text">安装Apache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深入Apache2-conf文件内容"><span class="nav-number">2.</span> <span class="nav-text">深入Apache2.conf文件内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局配置"><span class="nav-number">2.1.</span> <span class="nav-text">全局配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Timeout"><span class="nav-number">2.1.1.</span> <span class="nav-text">Timeout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KeepAlive"><span class="nav-number">2.1.2.</span> <span class="nav-text">KeepAlive</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MaxKeepAliveRequests"><span class="nav-number">2.1.3.</span> <span class="nav-text">MaxKeepAliveRequests</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KeepAliveTimeout"><span class="nav-number">2.1.4.</span> <span class="nav-text">KeepAliveTimeout</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MPM-配置"><span class="nav-number">3.</span> <span class="nav-text">MPM 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置虚拟主机"><span class="nav-number">4.</span> <span class="nav-text">配置虚拟主机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Apache中启用和禁用网站和模块"><span class="nav-number">4.1.</span> <span class="nav-text">Apache中启用和禁用网站和模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启用用户文件夹实现文件服务器的功能"><span class="nav-number">5.</span> <span class="nav-text">启用用户文件夹实现文件服务器的功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#给你的文件添加访问权限"><span class="nav-number">5.1.</span> <span class="nav-text">给你的文件添加访问权限</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一级缓存"><span class="nav-number">1.</span> <span class="nav-text">一级缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二级缓存"><span class="nav-number">2.</span> <span class="nav-text">二级缓存</span></a></li></ol></div>
             
 
           </div>
@@ -881,9 +827,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'lippi';
-      var disqus_identifier = '/blog/2016/01/apache-configuration-in-ubuntu.html';
+      var disqus_identifier = '/blog/2017/08/mybatis-cache.html';
 
-      var disqus_title = "Ubuntu下Apache服务器的配置";
+      var disqus_title = "MyBatis 缓存介绍";
 
 
       function run_disqus_script(disqus_script) {

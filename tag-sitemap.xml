@@ -534,21 +534,7 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/MyBatis/</loc>
-        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.ezlippi.com/tags/ORM/</loc>
-        <lastmod>2017-03-11T15:43:23.549Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.ezlippi.com/tags/DataBase/</loc>
         <lastmod>2017-03-11T15:43:23.549Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -576,13 +562,6 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/Java/</loc>
-        <lastmod>2017-08-06T11:52:48.118Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.ezlippi.com/tags/Junit/</loc>
         <lastmod>2017-08-06T11:52:48.118Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -599,6 +578,34 @@
     <url>
         <loc>http://www.ezlippi.com/tags/Mock/</loc>
         <lastmod>2017-08-06T11:52:48.118Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Java/</loc>
+        <lastmod>2017-08-07T14:32:51.315Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/MyBatis/</loc>
+        <lastmod>2017-08-07T14:32:51.315Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/DataBase/</loc>
+        <lastmod>2017-08-07T14:32:51.315Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Dao/</loc>
+        <lastmod>2017-08-07T14:32:51.315Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -304,6 +304,34 @@
 
       <h2 class="post-title">
         
+            <a class="post-title-link" href="/blog/2017/08/mybatis-cache.html" itemprop="url">
+              
+                <span itemprop="name">MyBatis 缓存介绍</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-08-07T13:38:32+08:00"
+              content="2017-08-07" >
+          08-07
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
             <a class="post-title-link" href="/blog/2017/08/powermock-introduction.html" itemprop="url">
               
                 <span itemprop="name">单元测试框架PowerMock教程</span>
@@ -481,7 +509,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">72</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -499,7 +527,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-count">87</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -905,18 +933,7 @@
 
 </body>
 </html>
-          var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
+ndexOf(keyword);
                     if( index_title >= 0 || index_content >= 0 ){
                       isMatch = true;
                       if (i == 0) {
