@@ -140,9 +140,9 @@
     
       <category term="MyBatis" scheme="http://www.ezlippi.com/tags/MyBatis/"/>
     
-      <category term="ORM" scheme="http://www.ezlippi.com/tags/ORM/"/>
-    
       <category term="DataBase" scheme="http://www.ezlippi.com/tags/DataBase/"/>
+    
+      <category term="ORM" scheme="http://www.ezlippi.com/tags/ORM/"/>
     
   </entry>
   
@@ -1129,6 +1129,27 @@
   </entry>
   
   <entry>
+    <title>如何评价『黑客与画家』</title>
+    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
+    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
+    <published>2014-10-31T16:00:00.000Z</published>
+    <updated>2016-02-29T12:35:55.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;传送门：&lt;a href=&quot;http://t.cn/zlg4njc&quot;&gt;黑客与画家:硅谷创业之父Paul Graham文集&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，&lt;br&gt;&lt;strong&gt;他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。&lt;/strong&gt;&lt;br&gt;他没有送给我们一条大鱼，却把捕捉大鱼的方法交给了我们， &lt;strong&gt;授人以鱼，不如授人以渔&lt;/strong&gt;。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
+    
+    
+      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
+    
+  </entry>
+  
+  <entry>
     <title>java中NIO与传统IO</title>
     <link href="http://www.ezlippi.com//blog/2014/11/java-nio.html"/>
     <id>http://www.ezlippi.com//blog/2014/11/java-nio.html</id>
@@ -1152,27 +1173,6 @@
       <category term="IO" scheme="http://www.ezlippi.com/tags/IO/"/>
     
       <category term="阻塞" scheme="http://www.ezlippi.com/tags/%E9%98%BB%E5%A1%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何评价『黑客与画家』</title>
-    <link href="http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html"/>
-    <id>http://www.ezlippi.com//blog/2014/11/how-to-evaluate-the-hackers-and-painters.html</id>
-    <published>2014-10-31T16:00:00.000Z</published>
-    <updated>2016-02-29T12:35:55.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;传送门：&lt;a href=&quot;http://t.cn/zlg4njc&quot;&gt;黑客与画家:硅谷创业之父Paul Graham文集&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;一本好的书，让我们收获的不单单是某种技巧，或者某种方法论，&lt;br&gt;&lt;strong&gt;他教给我们的是一种严密的思维方式，是一种学会把自己的眼光放得更加长远的决策习惯，他促使我们养成独立思考的习惯。&lt;/strong&gt;&lt;br&gt;他没有送给我们一条大鱼，却把捕捉大鱼的方法交给了我们， &lt;strong&gt;授人以鱼，不如授人以渔&lt;/strong&gt;。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="book" scheme="http://www.ezlippi.com/categories/book/"/>
-    
-    
-      <category term="book" scheme="http://www.ezlippi.com/tags/book/"/>
     
   </entry>
   
