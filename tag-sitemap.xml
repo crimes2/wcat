@@ -583,13 +583,6 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/Java/</loc>
-        <lastmod>2017-08-07T14:32:51.315Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.ezlippi.com/tags/Dao/</loc>
         <lastmod>2017-08-07T14:32:51.315Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -606,6 +599,20 @@
     <url>
         <loc>http://www.ezlippi.com/tags/DataBase/</loc>
         <lastmod>2017-09-29T14:53:10.612Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Java/</loc>
+        <lastmod>2017-10-09T13:44:21.659Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Jvm/</loc>
+        <lastmod>2017-10-09T13:44:21.659Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
