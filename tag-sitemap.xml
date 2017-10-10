@@ -604,15 +604,29 @@
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/Java/</loc>
+        <loc>http://www.ezlippi.com/tags/Jvm/</loc>
         <lastmod>2017-10-09T13:44:21.659Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.ezlippi.com/tags/Jvm/</loc>
-        <lastmod>2017-10-09T13:44:21.659Z</lastmod>
+        <loc>http://www.ezlippi.com/tags/Java/</loc>
+        <lastmod>2017-10-10T14:56:22.645Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Spring/</loc>
+        <lastmod>2017-10-10T14:56:22.645Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.ezlippi.com/tags/Transaction/</loc>
+        <lastmod>2017-10-10T14:56:22.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
