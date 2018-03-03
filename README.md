@@ -1,1 +1,1 @@
-博客源码请到coding-pages分支[https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/](https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/)
+博客[https://crimes2.github.io/](https://crimes2.github.io/)
